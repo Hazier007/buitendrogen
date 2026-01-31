@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Gemeente, gemeentes, getGemeentesByProvince } from '../data/gemeentes';
+import { Gemeente, getGemeentesByProvince } from '../data/gemeentes';
 
 interface WeatherData {
   temp: number;
@@ -125,6 +125,7 @@ export default function GemeenteClient({ gemeente, initialWeather }: GemeenteCli
     if (!initialWeather) {
       fetchWeather();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const fetchWeather = async () => {
@@ -341,12 +342,12 @@ export default function GemeenteClient({ gemeente, initialWeather }: GemeenteCli
             </h2>
             <div className="prose prose-gray max-w-none">
               <p className="text-gray-600 mb-4">
-                Woon je in <strong>{gemeente.name}</strong> en vraag je je af of je vandaag je was buiten kunt hangen? 
-                Met onze droogtijd calculator zie je direct of de weersomstandigheden in {gemeente.name} geschikt zijn 
+                Woon je in <strong>{gemeente.name}</strong> en vraag je je af of je vandaag je was buiten kunt hangen?
+                Met onze droogtijd calculator zie je direct of de weersomstandigheden in {gemeente.name} geschikt zijn
                 om je was buiten te drogen.
               </p>
               <p className="text-gray-600 mb-4">
-                Het weer in {gemeente.province} kan wisselvallig zijn. Daarom is het handig om voor je de was 
+                Het weer in {gemeente.province} kan wisselvallig zijn. Daarom is het handig om voor je de was
                 buiten hangt even te checken hoe de temperatuur, luchtvochtigheid en wind ervoor staan in {gemeente.name}.
               </p>
               <h3 className="text-lg font-semibold text-gray-800 mt-6 mb-3">
