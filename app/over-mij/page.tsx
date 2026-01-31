@@ -1,0 +1,102 @@
+import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Over Mij | Buitendrogen.be',
+  description: 'Leer meer over Bart, de maker van Buitendrogen.be en andere handige Belgische online tools.',
+};
+
+export default function OverMij() {
+  return (
+    <main className="min-h-screen bg-gradient-to-b from-sky-50 to-white">
+      {/* Header */}
+      <div className="bg-gradient-to-r from-sky-500 to-blue-600 text-white py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <Link href="/" className="text-sky-100 hover:text-white mb-4 inline-block">
+            ← Terug naar calculator
+          </Link>
+          <h1 className="text-4xl font-bold">Over de maker</h1>
+        </div>
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 py-12">
+        {/* Bio Section */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
+          <div className="flex flex-col md:flex-row gap-8 items-start">
+            <div className="w-24 h-24 bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl flex items-center justify-center text-white text-4xl font-bold shrink-0">
+              B
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">Hallo, ik ben Bart!</h2>
+              <p className="text-gray-600 mb-4">
+                Ik ben een Belgische webontwikkelaar en ondernemer met een passie voor het bouwen van 
+                handige online tools. Tools die het dagelijks leven net iets makkelijker maken — gratis 
+                en zonder poespas.
+              </p>
+              <p className="text-gray-600 mb-4">
+                Als eigenaar van <a href="https://hazier.be" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:text-sky-800 underline font-medium">Hazier</a> help 
+                ik bedrijven met webdesign, SEO en online marketing. Daarnaast ben ik co-founder 
+                van <a href="https://collectpro.be" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:text-sky-800 underline font-medium">CollectPro</a>, 
+                een platform voor debiteurenbeheer.
+              </p>
+              <p className="text-gray-600">
+                Deze gratis tools zijn mijn manier om iets terug te geven aan de community. 
+                Heb je feedback of ideeën voor nieuwe tools? Laat het me weten!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Contact Section */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">Contact</h2>
+          <p className="text-gray-600 mb-4">
+            Vragen, suggesties of gewoon even hallo zeggen? Stuur me gerust een mailtje!
+          </p>
+          <a 
+            href="mailto:info@hazier.be" 
+            className="inline-flex items-center gap-2 px-6 py-3 bg-sky-500 hover:bg-sky-600 text-white font-semibold rounded-xl transition-colors"
+          >
+            📧 info@hazier.be
+          </a>
+        </div>
+
+        {/* Other Tools Section */}
+        <div className="bg-white rounded-2xl shadow-xl p-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">Meer handige tools</h2>
+          <p className="text-gray-600 mb-6">
+            Bekijk ook mijn andere gratis online tools:
+          </p>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {[
+              { name: 'BTW Calculator', url: 'https://btw-calculator.be', desc: 'BTW berekenen voor België' },
+              { name: 'IBAN Validator', url: 'https://ibanvalidator.be', desc: 'IBAN nummer controleren' },
+              { name: 'Huurrendement Calculator', url: 'https://huurrendementcalculator.be', desc: 'Vastgoed rendement berekenen' },
+              { name: 'KM Vergoeding', url: 'https://kmvergoeding.be', desc: 'Kilometervergoeding berekenen' },
+              { name: 'Datum Berekenen', url: 'https://datumberekenen.be', desc: 'Dagen tussen datums' },
+              { name: 'Zwangerschapscalculator', url: 'https://zwangerschapscalculator.be', desc: 'Uitgerekende datum' },
+              { name: 'Kleurcodes', url: 'https://kleurcodes.be', desc: 'HEX RGB kleurconverter' },
+              { name: 'Goedkoop Stroom', url: 'https://goedkoopstroom.be', desc: 'Dynamische stroomprijzen' },
+            ].map((tool) => (
+              <a
+                key={tool.name}
+                href={tool.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block p-4 bg-gray-50 hover:bg-sky-50 rounded-xl transition-colors group"
+              >
+                <div className="font-semibold text-gray-800 group-hover:text-sky-600">{tool.name}</div>
+                <div className="text-sm text-gray-500">{tool.desc}</div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer className="text-center text-gray-500 py-8">
+        <p>© {new Date().getFullYear()} Buitendrogen.be</p>
+      </footer>
+    </main>
+  );
+}
