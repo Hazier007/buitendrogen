@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { usePathname } from 'next/navigation';
 
 function titleCase(s: string) {
@@ -14,6 +14,7 @@ function titleCase(s: string) {
 function gemeenteFromPath(pathname: string) {
   const slug = pathname.replace(/^\//, '').split('/')[0];
   if (!slug || slug === 'over-mij' || slug === 'api' || slug === 'sitemap.xml') return null;
+
   // crude slug -> name: hansbeke -> Hansbeke, sint-niklaas -> Sint Niklaas
   return titleCase(decodeURIComponent(slug).replace(/-/g, ' '));
 }
@@ -35,7 +36,6 @@ export default function FloatingShare() {
   }, []);
 
   const gemeente = useMemo(() => gemeenteFromPath(pathname || '/'), [pathname]);
-
   const text = useMemo(() => {
     if (gemeente) return `Goed wasweer in ${gemeente}? Check hier de droogtijd.`;
     return 'Check hier de Buiten Drogen Calculator (droogtijd van je was op basis van het weer).';
@@ -151,7 +151,7 @@ export default function FloatingShare() {
         style={buttonStyle('#6B7280', size)}
         aria-label="Kopieer link"
       >
-        ⧉
+        Copy
       </button>
       {typeof navigator !== 'undefined' && 'share' in navigator && (
         <button
@@ -160,7 +160,7 @@ export default function FloatingShare() {
           style={buttonStyle('#10B981', size)}
           aria-label="Delen"
         >
-          ↗
+          Delen
         </button>
       )}
     </div>
@@ -183,5 +183,6 @@ function buttonStyle(bg: string, size: number): React.CSSProperties {
     fontWeight: 700,
     fontFamily: 'system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif',
     lineHeight: 1,
+    padding: 0,
   };
 }
