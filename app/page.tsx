@@ -637,7 +637,7 @@ const tips: string[] = [];
                 </div>
                 <div className="flex items-center bg-sky-50 border border-sky-100 rounded-lg p-3">
                   <input type="checkbox" className="mr-3 h-4 w-4 text-sky-600" />
-                  <span className="text-gray-700">🌀 Genoeg wind (>10 km/u)?</span>
+                  <span className="text-gray-700">🌀 Genoeg wind (&gt;10 km/u)?</span>
                 </div>
                 <div className="flex items-center bg-sky-50 border border-sky-100 rounded-lg p-3">
                   <input type="checkbox" className="mr-3 h-4 w-4 text-sky-600" />
@@ -949,7 +949,7 @@ const tips: string[] = [];
               <div>
                 <h3 className="font-semibold text-gray-800">Is het waar dat was sneller droogt op een bewolkte, winderige dag dan op een windstille zonnige dag?</h3>
                 <p className="text-gray-600">
-                  Ja, dat kan inderdaad waar zijn! Wind is vaak belangrijker voor drogen dan zonlicht. Een bewolkte dag met stevige wind (>20 km/u) en lage luchtvochtigheid kan effectiever zijn dan een windstille zonnige dag met hoge luchtvochtigheid. Wind voert voortdurend vochtige lucht weg en brengt droge lucht aan, terwijl zonlicht alleen verhit. De ideale combinatie is natuurlijk zon én wind. Dit is waarom onze calculator alle vier de factoren (temperatuur, luchtvochtigheid, wind, bewolking) meeneemt in plaats van alleen naar de temperatuur te kijken. Het verklaart ook waarom was soms sneller droogt in de herfst dan op een warme maar vochtige zomerdag.
+                  Ja, dat kan inderdaad waar zijn! Wind is vaak belangrijker voor drogen dan zonlicht. Een bewolkte dag met stevige wind (&gt;20 km/u) en lage luchtvochtigheid kan effectiever zijn dan een windstille zonnige dag met hoge luchtvochtigheid. Wind voert voortdurend vochtige lucht weg en brengt droge lucht aan, terwijl zonlicht alleen verhit. De ideale combinatie is natuurlijk zon én wind. Dit is waarom onze calculator alle vier de factoren (temperatuur, luchtvochtigheid, wind, bewolking) meeneemt in plaats van alleen naar de temperatuur te kijken. Het verklaart ook waarom was soms sneller droogt in de herfst dan op een warme maar vochtige zomerdag.
                 </p>
               </div>
             </div>
