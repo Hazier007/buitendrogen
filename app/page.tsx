@@ -324,8 +324,51 @@ const tips: string[] = [];
             )}
           </div>
 
+          {/* Table of Contents */}
+          <div className="bg-sky-50 border border-sky-100 rounded-2xl p-6 md:p-8 mb-8">
+            <h2 className="text-xl font-bold text-gray-800 mb-4">📋 Inhoudsopgave</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <a href="#hoe-werkt-berekening" className="flex items-center py-2 px-3 text-sky-700 hover:text-sky-900 hover:bg-sky-100 rounded-lg transition-colors">
+                <span className="mr-2">🔍</span>
+                Hoe werkt de berekening?
+              </a>
+              <a href="#tips-sneller-drogen" className="flex items-center py-2 px-3 text-sky-700 hover:text-sky-900 hover:bg-sky-100 rounded-lg transition-colors">
+                <span className="mr-2">⚡</span>
+                Tips voor sneller buiten drogen
+              </a>
+              <a href="#droogtijd-per-kledingstuk" className="flex items-center py-2 px-3 text-sky-700 hover:text-sky-900 hover:bg-sky-100 rounded-lg transition-colors">
+                <span className="mr-2">👕</span>
+                Droogtijd per kledingstuk
+              </a>
+              <a href="#buiten-drogen-per-seizoen" className="flex items-center py-2 px-3 text-sky-700 hover:text-sky-900 hover:bg-sky-100 rounded-lg transition-colors">
+                <span className="mr-2">🌤️</span>
+                Buiten drogen per seizoen
+              </a>
+              <a href="#checklist" className="flex items-center py-2 px-3 text-sky-700 hover:text-sky-900 hover:bg-sky-100 rounded-lg transition-colors">
+                <span className="mr-2">✅</span>
+                Buiten drogen checklist
+              </a>
+              <a href="#vergelijking-droogmethodes" className="flex items-center py-2 px-3 text-sky-700 hover:text-sky-900 hover:bg-sky-100 rounded-lg transition-colors">
+                <span className="mr-2">⚖️</span>
+                Vergelijking droogmethodes
+              </a>
+              <a href="#regionale-tips" className="flex items-center py-2 px-3 text-sky-700 hover:text-sky-900 hover:bg-sky-100 rounded-lg transition-colors">
+                <span className="mr-2">🗺️</span>
+                Regionale droogtips
+              </a>
+              <a href="#alles-over-belgie" className="flex items-center py-2 px-3 text-sky-700 hover:text-sky-900 hover:bg-sky-100 rounded-lg transition-colors">
+                <span className="mr-2">🇧🇪</span>
+                Alles over buiten drogen in België
+              </a>
+              <a href="#veelgestelde-vragen" className="flex items-center py-2 px-3 text-sky-700 hover:text-sky-900 hover:bg-sky-100 rounded-lg transition-colors">
+                <span className="mr-2">❓</span>
+                Veelgestelde vragen
+              </a>
+            </div>
+          </div>
+
           <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Hoe werkt de berekening?</h2>
+            <h2 id="hoe-werkt-berekening" className="text-2xl font-bold text-gray-800 mb-4">Hoe werkt de berekening?</h2>
             <div className="prose prose-gray max-w-none">
               <p className="text-gray-600 mb-4">De droogtijd van je was hangt af van vier belangrijke factoren:</p>
               <div className="grid md:grid-cols-2 gap-4">
@@ -350,7 +393,7 @@ const tips: string[] = [];
           </div>
 
           <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Tips voor sneller buiten drogen</h2>
+            <h2 id="tips-sneller-drogen" className="text-2xl font-bold text-gray-800 mb-4">Tips voor sneller buiten drogen</h2>
             <ul className="space-y-3 text-gray-600">
               <li>
                 <strong>Centrifugeer goed</strong> - Hoe minder water in de was, hoe sneller het droogt
@@ -371,85 +414,192 @@ const tips: string[] = [];
           </div>
 
           <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Veelgestelde vragen</h2>
-            <div className="space-y-4">
-              <div>
-                <h3 className="font-semibold text-gray-800">Kan ik was buiten drogen in de winter?</h3>
-                <p className="text-gray-600">
+            <h2 id="veelgestelde-vragen" className="text-2xl font-bold text-gray-800 mb-4">Veelgestelde vragen</h2>
+            <div className="space-y-3">
+              <details className="border border-gray-200 rounded-lg hover:border-gray-300 transition-colors">
+                <summary className="cursor-pointer p-4 font-semibold text-gray-800 hover:bg-gray-50 rounded-lg select-none">
+                  Kan ik was buiten drogen in de winter?
+                </summary>
+                <div className="p-4 pt-0 text-gray-600">
                   Ja, zelfs bij temperaturen rond of onder het vriespunt kan was buiten drogen. Dit gebeurt via sublimatie: het water in je kleding gaat rechtstreeks van ijs over naar waterdamp, zonder eerst vloeibaar te worden. Dit werkt het best bij droog winterweer met een lage luchtvochtigheid en wat wind. Het duurt wel aanzienlijk langer dan in de zomer — reken op een hele dag. Vermijd regenachtige of mistige winterdagen, want dan is de lucht al te vochtig om extra vocht op te nemen.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-800">Wat is beter: buiten drogen of de droger?</h3>
-                <p className="text-gray-600">
+                </div>
+              </details>
+
+              <details className="border border-gray-200 rounded-lg hover:border-gray-300 transition-colors">
+                <summary className="cursor-pointer p-4 font-semibold text-gray-800 hover:bg-gray-50 rounded-lg select-none">
+                  Wat is beter: buiten drogen of de droger?
+                </summary>
+                <div className="p-4 pt-0 text-gray-600">
                   Buiten drogen is vrijwel altijd de betere keuze als het weer het toelaat. Je bespaart gemiddeld 2 tot 4 kWh per droogbeurt, wat neerkomt op zo&apos;n €0,60 tot €1,20 per keer. Bovendien is buiten drogen veel zachter voor je kleding: vezels slijten minder, kleuren blijven langer mooi en elastiek behoudt zijn veerkracht. Een wasdroger is handig bij slecht weer, tijdsdruk of voor wie geen buitenruimte heeft, maar de slijtage aan kleding is merkbaar hoger.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-800">Kan was te lang buiten hangen?</h3>
-                <p className="text-gray-600">
+                </div>
+              </details>
+
+              <details className="border border-gray-200 rounded-lg hover:border-gray-300 transition-colors">
+                <summary className="cursor-pointer p-4 font-semibold text-gray-800 hover:bg-gray-50 rounded-lg select-none">
+                  Kan was te lang buiten hangen?
+                </summary>
+                <div className="p-4 pt-0 text-gray-600">
                   Ja, langdurig buiten hangen kan nadelig zijn. Fel zonlicht bevat UV-straling die kleuren doet vervagen, vooral bij donkere of felgekleurde kledingstukken. Delicate stoffen zoals zijde of viscose kunnen bovendien bros worden door te lange blootstelling aan zon en wind. Als je was al droog is, haal ze dan zo snel mogelijk binnen. Hang gekleurde items bij voorkeur binnenstebuiten op of kies een plek in de halfschaduw om verkleuring te voorkomen.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-800">Waarom ruikt buiten gedroogde was zo lekker?</h3>
-                <p className="text-gray-600">
+                </div>
+              </details>
+
+              <details className="border border-gray-200 rounded-lg hover:border-gray-300 transition-colors">
+                <summary className="cursor-pointer p-4 font-semibold text-gray-800 hover:bg-gray-50 rounded-lg select-none">
+                  Waarom ruikt buiten gedroogde was zo lekker?
+                </summary>
+                <div className="p-4 pt-0 text-gray-600">
                   Die heerlijke frisse geur van buitengedroogde was heeft een wetenschappelijke verklaring. UV-straling van de zon doodt bacteriën en schimmels die geurtjes veroorzaken. Daarnaast speelt ozon — een molecule die in kleine hoeveelheden in de buitenlucht aanwezig is — een rol als natuurlijk ontgeurringsmiddel. De combinatie van wind, zon en frisse lucht zorgt voor een geur die geen enkel wasverzachter kan evenaren. Dit effect is het sterkst op zonnige dagen met een lichte bries.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-800">Bij welke temperatuur droogt was het snelst?</h3>
-                <p className="text-gray-600">
+                </div>
+              </details>
+
+              <details className="border border-gray-200 rounded-lg hover:border-gray-300 transition-colors">
+                <summary className="cursor-pointer p-4 font-semibold text-gray-800 hover:bg-gray-50 rounded-lg select-none">
+                  Bij welke temperatuur droogt was het snelst?
+                </summary>
+                <div className="p-4 pt-0 text-gray-600">
                   Was droogt het snelst bij temperaturen boven 25°C in combinatie met een lage luchtvochtigheid. Warmere lucht kan namelijk meer vocht opnemen dan koude lucht, waardoor verdamping sneller gaat. Maar temperatuur alleen is niet allesbepalend: een dag van 15°C met droge lucht en stevige wind kan effectiever zijn dan een vochtige, windstille dag van 28°C. In België heb je de beste droogomstandigheden doorgaans van mei tot september, wanneer temperatuur en luchtvochtigheid samen het gunstigst zijn.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-800">Hoelang duurt het om was buiten te drogen?</h3>
-                <p className="text-gray-600">
+                </div>
+              </details>
+
+              <details className="border border-gray-200 rounded-lg hover:border-gray-300 transition-colors">
+                <summary className="cursor-pointer p-4 font-semibold text-gray-800 hover:bg-gray-50 rounded-lg select-none">
+                  Hoelang duurt het om was buiten te drogen?
+                </summary>
+                <div className="p-4 pt-0 text-gray-600">
                   De droogtijd varieert sterk afhankelijk van het weer en het type wasgoed. Op een warme zomerdag met zon en wind zijn dunne T-shirts en ondergoed al droog in 1 tot 2 uur. Normale was zoals katoenen kleding heeft gemiddeld 2 tot 4 uur nodig. Dikke items zoals handdoeken, jeans of hoodies kunnen 4 tot 8 uur duren. Op koelere of vochtigere dagen moet je rekenen op een halve tot een hele dag. Gebruik onze calculator hierboven voor een nauwkeurige schatting op basis van het actuele weer.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-800">Kan ik was buiten drogen als het bewolkt is?</h3>
-                <p className="text-gray-600">
+                </div>
+              </details>
+
+              <details className="border border-gray-200 rounded-lg hover:border-gray-300 transition-colors">
+                <summary className="cursor-pointer p-4 font-semibold text-gray-800 hover:bg-gray-50 rounded-lg select-none">
+                  Kan ik was buiten drogen als het bewolkt is?
+                </summary>
+                <div className="p-4 pt-0 text-gray-600">
                   Absoluut. Bewolking vermindert de directe zonnestraling, maar was droogt ook prima zonder zon. Wind en lage luchtvochtigheid zijn eigenlijk belangrijker dan zonlicht voor het droogproces. Op een bewolkte dag met een frisse bries en droge lucht droogt je was nog altijd goed, al duurt het iets langer dan op een zonnige dag. In België zijn licht bewolkte dagen met wind ideaal — je kleding droogt én de kleuren vervagen minder door het ontbreken van felle UV-straling.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-800">Wat doe ik als het begint te regenen terwijl mijn was buiten hangt?</h3>
-                <p className="text-gray-600">
+                </div>
+              </details>
+
+              <details className="border border-gray-200 rounded-lg hover:border-gray-300 transition-colors">
+                <summary className="cursor-pointer p-4 font-semibold text-gray-800 hover:bg-gray-50 rounded-lg select-none">
+                  Wat doe ik als het begint te regenen terwijl mijn was buiten hangt?
+                </summary>
+                <div className="p-4 pt-0 text-gray-600">
                   Als er een korte bui voorbijtrekt, is er niet meteen reden tot paniek. Een lichte regenbui maakt je was nat, maar zodra de zon doorbreekt en de wind aantrekt, droogt alles weer snel op. Bij langdurige of hevige regen haal je de was best zo snel mogelijk binnen. Een overkapping of veranda kan uitkomst bieden. Tip: check altijd de weersverwachting voordat je was buitenhangt en plan je wasbeurt rond een droog blok van minstens een paar uur.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-800">Droogt donkere was sneller dan witte was?</h3>
-                <p className="text-gray-600">
+                </div>
+              </details>
+
+              <details className="border border-gray-200 rounded-lg hover:border-gray-300 transition-colors">
+                <summary className="cursor-pointer p-4 font-semibold text-gray-800 hover:bg-gray-50 rounded-lg select-none">
+                  Droogt donkere was sneller dan witte was?
+                </summary>
+                <div className="p-4 pt-0 text-gray-600">
                   Donkere kleding absorbeert meer zonlicht en wordt daardoor warmer, wat de verdamping iets kan versnellen. Het verschil is in de praktijk echter klein — het type stof en de dikte van het materiaal hebben een veel grotere invloed dan de kleur. Een dunne witte katoenen T-shirt droogt sneller dan een dikke donkere hoodie. Let wel op: donkere was kan sneller verkleuren in de zon, dus hang ze bij voorkeur binnenstebuiten of in de halfschaduw.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-800">Hoeveel energie bespaar je door buiten te drogen?</h3>
-                <p className="text-gray-600">
+                </div>
+              </details>
+
+              <details className="border border-gray-200 rounded-lg hover:border-gray-300 transition-colors">
+                <summary className="cursor-pointer p-4 font-semibold text-gray-800 hover:bg-gray-50 rounded-lg select-none">
+                  Hoeveel energie bespaar je door buiten te drogen?
+                </summary>
+                <div className="p-4 pt-0 text-gray-600">
                   Een gemiddelde wasdroger verbruikt tussen de 2 en 4,5 kWh per droogcyclus, afhankelijk van het type (condensdroger, warmtepomp of luchtafvoer). Bij een elektriciteitsprijs van circa €0,30 per kWh bespaar je al snel €0,60 tot €1,35 per beurt. Wie drie keer per week wast en buiten droogt in plaats van de droger te gebruiken, bespaart jaarlijks tot €200 op de energierekening. Bovendien vermijd je de CO₂-uitstoot van zo&apos;n 150 tot 350 kg per jaar — goed voor het milieu én je portemonnee.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-800">Kan ik dekens en donsdekken buiten drogen?</h3>
-                <p className="text-gray-600">
+                </div>
+              </details>
+
+              <details className="border border-gray-200 rounded-lg hover:border-gray-300 transition-colors">
+                <summary className="cursor-pointer p-4 font-semibold text-gray-800 hover:bg-gray-50 rounded-lg select-none">
+                  Kan ik dekens en donsdekken buiten drogen?
+                </summary>
+                <div className="p-4 pt-0 text-gray-600">
                   Ja, maar het vergt wat extra aandacht. Dekens en donsdekken zijn zwaar en dik, waardoor ze lang nodig hebben om volledig te drogen — reken op een volledige dag bij goed weer. Hang ze over een stevige waslijn of droogrek zodat er aan beide kanten lucht bij kan. Schud donsdekken regelmatig op tijdens het drogen om klontvorming te voorkomen. Kies een droge, zonnige dag met wind. Controleer voor je ze binnenbrengt of ze écht helemaal droog zijn, want restvocht kan schimmelvorming veroorzaken.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-800">Wat is het beste moment van de dag om was buiten te hangen?</h3>
-                <p className="text-gray-600">
+                </div>
+              </details>
+
+              <details className="border border-gray-200 rounded-lg hover:border-gray-300 transition-colors">
+                <summary className="cursor-pointer p-4 font-semibold text-gray-800 hover:bg-gray-50 rounded-lg select-none">
+                  Wat is het beste moment van de dag om was buiten te hangen?
+                </summary>
+                <div className="p-4 pt-0 text-gray-600">
                   Het ideale moment is &apos;s ochtends vroeg, tussen 8 en 10 uur. De luchtvochtigheid daalt naarmate de dag vordert en de temperatuur stijgt, waardoor je was het meeste profijt heeft van de droogste uren van de dag — doorgaans tussen 11 en 16 uur. Door &apos;s ochtends te starten, benut je het volledige droogvenster. Vermijd het om was &apos;s avonds laat buiten te hangen, want de luchtvochtigheid stijgt dan weer en je was kan dauwnat worden in de nacht.
-                </p>
-              </div>
+                </div>
+              </details>
+
+              <details className="border border-gray-200 rounded-lg hover:border-gray-300 transition-colors">
+                <summary className="cursor-pointer p-4 font-semibold text-gray-800 hover:bg-gray-50 rounded-lg select-none">
+                  Kan ik babykleding veilig buiten drogen?
+                </summary>
+                <div className="p-4 pt-0 text-gray-600">
+                  Ja, babykleding kan prima buiten drogen en is zelfs aan te raden. De natuurlijke antibacteriële werking van UV-licht van de zon helpt schadelijke bacteriën te doden, wat juist goed is voor de gevoelige huid van baby's. Vermijd wel het gebruik van geparfumeerde wasverzachters en was babykleding apart van de rest om kruisbesmetting te voorkomen. Hang babykleertjes bij voorkeur niet direct in de felle middagzon om verkleuring te vermijden, en zorg ervoor dat ze volledig droog zijn voor je ze opvouwt.
+                </div>
+              </details>
+
+              <details className="border border-gray-200 rounded-lg hover:border-gray-300 transition-colors">
+                <summary className="cursor-pointer p-4 font-semibold text-gray-800 hover:bg-gray-50 rounded-lg select-none">
+                  Is buiten drogen hygiënisch genoeg?
+                </summary>
+                <div className="p-4 pt-0 text-gray-600">
+                  Buiten drogen is zelfs hygiënischer dan de meeste andere droogmethodes. UV-straling van zonlicht heeft een sterke desinfecterende werking en doodt bacteriën, schimmels en virussen die wasdrogers niet aankunnen. Verse buitenlucht transporteert micro-organismen weg in plaats van ze rond te blazen in een gesloten systeem. Wel belangrijk: zorg dat je waslijn schoon is, gebruik schone knijpers, en hang nooit vochtige was direct op een vuile ondergrond. Bij zeer vervuilde buitenlucht (bijvoorbeeld tijdens sahara-stof of smog) kun je beter binnen drogen.
+                </div>
+              </details>
+
+              <details className="border border-gray-200 rounded-lg hover:border-gray-300 transition-colors">
+                <summary className="cursor-pointer p-4 font-semibold text-gray-800 hover:bg-gray-50 rounded-lg select-none">
+                  Hoe voorkom ik dat mijn was stijf wordt na buiten drogen?
+                </summary>
+                <div className="p-4 pt-0 text-gray-600">
+                  Stijve was na buiten drogen ontstaat doordat natuurlijke mineralen uit hard water in de vezels achterblijven wanneer het water verdampt. Dit kun je grotendeels voorkomen door: 1) Een scheutje witte azijn toe te voegen aan de spoelgang (100ml voor een normale was), 2) Was goed uitschudden voordat je het ophangt en nogmaals als je het binnenhaalt, 3) Kleding binnenhalen zodra het droog is, niet uren later, 4) Een klein beetje wasverzachter gebruiken (minder dan aangegeven op de verpakking). Handdoeken worden vaak het stijfst — schud deze extra goed uit.
+                </div>
+              </details>
+
+              <details className="border border-gray-200 rounded-lg hover:border-gray-300 transition-colors">
+                <summary className="cursor-pointer p-4 font-semibold text-gray-800 hover:bg-gray-50 rounded-lg select-none">
+                  Mag je was buiten drogen in een appartementsgebouw?
+                </summary>
+                <div className="p-4 pt-0 text-gray-600">
+                  Dit hangt af van je huurcontract, VvE-reglement en gemeentelijke verordeningen. In de meeste Belgische gemeenten is buiten drogen vanaf de begane grond toegestaan, maar check altijd eerst de lokale regels. Sommige appartementsgebouwen hebben specifieke regels over was op balkons vanwege het uitzicht of druppelwater. Veelvoorkomende beperkingen: geen was aan de straatkant, alleen witte was zichtbaar, of alleen op bepaalde tijden. Als buiten drogen niet mag, zijn gemeenschappelijke droogzolders of wasruimtes vaak een goed alternatief. Informeer bij je verhuurder of VvE-beheerder.
+                </div>
+              </details>
+
+              <details className="border border-gray-200 rounded-lg hover:border-gray-300 transition-colors">
+                <summary className="cursor-pointer p-4 font-semibold text-gray-800 hover:bg-gray-50 rounded-lg select-none">
+                  Helpt wasverzachter bij buiten drogen?
+                </summary>
+                <div className="p-4 pt-0 text-gray-600">
+                  Wasverzachter kan inderdaad helpen, vooral om stijfheid te voorkomen die soms optreedt bij buiten drogen. Het legt een dunne laag rond de vezels die ze soepel houdt. Gebruik echter minder dan de aanbevolen hoeveelheid — een derde van de aanbevolen dosis is vaak genoeg. Te veel wasverzachter kan de absorptie van handdoeken verminderen en gevoelige huid irriteren. Een natuurlijk alternatief is witte huishoudazijn (100ml in de spoelgang): dit werkt net zo goed tegen stijfheid en heeft bovendien een ontkalking effect. Voor milieubewuste huishoudens: moderne eco-wasverzachters werken prima en belasten het milieu minder.
+                </div>
+              </details>
+
+              <details className="border border-gray-200 rounded-lg hover:border-gray-300 transition-colors">
+                <summary className="cursor-pointer p-4 font-semibold text-gray-800 hover:bg-gray-50 rounded-lg select-none">
+                  Kan ik wollen kleding buiten drogen?
+                </summary>
+                <div className="p-4 pt-0 text-gray-600">
+                  Wollen kleding vergt extra zorg bij buiten drogen. Hang wol nooit rechtop aan een waslijn — dit veroorzaakt uitrekking. Leg wollen items horizontaal op een droogrek of handdoekrek, bij voorkeur in de schaduw want direct zonlicht kan wol doen krimpen en verkleuren. Zorg voor goede luchtcirculatie en draai het kledingstuk om zodra de bovenkant droog is. Vermijd buiten drogen bij harde wind die aan de wol kan trekken. Kasjmier en andere delicate wol droog je beter binnen op een handdoek. Schudde wol nooit hard uit — knijp overtollig water er voorzichtig uit en vorm het kledingstuk terug in de juiste vorm voordat je het laat drogen.
+                </div>
+              </details>
+
+              <details className="border border-gray-200 rounded-lg hover:border-gray-300 transition-colors">
+                <summary className="cursor-pointer p-4 font-semibold text-gray-800 hover:bg-gray-50 rounded-lg select-none">
+                  Waarom droogt mijn was niet goed ondanks goed weer?
+                </summary>
+                <div className="p-4 pt-0 text-gray-600">
+                  Er kunnen verschillende oorzaken zijn: 1) Te dicht opgehangen — was heeft ruimte nodig voor luchtcirculatie, 2) Niet goed gecentrifugeerd — moderne wasmachines kunnen vaak tot 1400 toeren, gebruik dit, 3) Te dikke lagen — vouw lakens en handdoeken maar één keer dubbel, 4) Schaduwrijke locatie — ook bij warm weer droogt was slecht zonder luchtstroom, 5) Hoge luchtvochtigheid ondanks goede temperatuur — check dit via weer-apps, 6) Vervuilde waslijn — vuil en vet houden vocht vast. Probeer onze calculator hierboven voor een objectieve inschatting van de droogomstandigheden.
+                </div>
+              </details>
+
+              <details className="border border-gray-200 rounded-lg hover:border-gray-300 transition-colors">
+                <summary className="cursor-pointer p-4 font-semibold text-gray-800 hover:bg-gray-50 rounded-lg select-none">
+                  Is het waar dat was sneller droogt op een bewolkte, winderige dag dan op een windstille zonnige dag?
+                </summary>
+                <div className="p-4 pt-0 text-gray-600">
+                  Ja, dat kan inderdaad waar zijn! Wind is vaak belangrijker voor drogen dan zonlicht. Een bewolkte dag met stevige wind (&gt;20 km/u) en lage luchtvochtigheid kan effectiever zijn dan een windstille zonnige dag met hoge luchtvochtigheid. Wind voert voortdurend vochtige lucht weg en brengt droge lucht aan, terwijl zonlicht alleen verhit. De ideale combinatie is natuurlijk zon én wind. Dit is waarom onze calculator alle vier de factoren (temperatuur, luchtvochtigheid, wind, bewolking) meeneemt in plaats van alleen naar de temperatuur te kijken. Het verklaart ook waarom was soms sneller droogt in de herfst dan op een warme maar vochtige zomerdag.
+                </div>
+              </details>
             </div>
           </div>
 
           <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Alles over buiten drogen in België</h2>
+            <h2 id="alles-over-belgie" className="text-2xl font-bold text-gray-800 mb-4">Alles over buiten drogen in België</h2>
             <div className="prose prose-gray max-w-none text-gray-600 space-y-4">
               <p>
                 Buiten drogen is een van de eenvoudigste manieren om energie te besparen en je ecologische voetafdruk te verkleinen. In België, waar de gemiddelde energieprijs tot de hoogste van Europa behoort, is elke kilowattuur die je niet verbruikt pure winst. Een doorsnee wasdroger verbruikt tussen de 2 en 4,5 kWh per cyclus. Wie regelmatig buiten droogt in plaats van de droger te gebruiken, kan jaarlijks tot €200 besparen op de elektriciteitsrekening. Dat is niet alleen goed voor je portemonnee, maar ook voor het klimaat: je vermijdt zo honderden kilogram CO₂-uitstoot per jaar.
@@ -483,7 +633,7 @@ const tips: string[] = [];
           </div>
 
           <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">Droogtijd per kledingstuk</h2>
+            <h2 id="droogtijd-per-kledingstuk" className="text-2xl font-bold text-gray-800 mb-6">Droogtijd per kledingstuk</h2>
             <p className="text-gray-600 mb-6">Geschatte droogtijden bij verschillende weersomstandigheden. Deze tijden zijn richtwaarden — gebruik onze calculator hierboven voor een nauwkeurige voorspelling.</p>
             
             <div className="overflow-x-auto">
@@ -551,7 +701,7 @@ const tips: string[] = [];
           </div>
 
           <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">Buiten drogen per seizoen</h2>
+            <h2 id="buiten-drogen-per-seizoen" className="text-2xl font-bold text-gray-800 mb-6">Buiten drogen per seizoen</h2>
             <p className="text-gray-600 mb-6">Elk seizoen heeft zijn eigen uitdagingen en voordelen voor het drogen van was. Hier vind je wat je kunt verwachten.</p>
             
             <div className="grid md:grid-cols-2 gap-6">
@@ -622,7 +772,7 @@ const tips: string[] = [];
           </div>
 
           <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">Buiten drogen checklist</h2>
+            <h2 id="checklist" className="text-2xl font-bold text-gray-800 mb-6">Buiten drogen checklist</h2>
             <p className="text-gray-600 mb-6">Loop deze checklist af voordat je je was buiten hangt om teleurstellingen te voorkomen.</p>
             
             <div className="grid md:grid-cols-2 gap-4">
@@ -688,7 +838,7 @@ const tips: string[] = [];
           </div>
 
           <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">Vergelijking droogmethodes</h2>
+            <h2 id="vergelijking-droogmethodes" className="text-2xl font-bold text-gray-800 mb-6">Vergelijking droogmethodes</h2>
             <p className="text-gray-600 mb-6">Welke droogmethode past het best bij jouw situatie? Vergelijk de voor- en nadelen van elke optie.</p>
             
             <div className="overflow-x-auto">
@@ -817,7 +967,7 @@ const tips: string[] = [];
           </div>
 
           <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">Regionale droogtips voor België</h2>
+            <h2 id="regionale-tips" className="text-2xl font-bold text-gray-800 mb-6">Regionale droogtips voor België</h2>
             <p className="text-gray-600 mb-6">België kent verschillende microklimaats. Hier zijn specifieke tips per regio om optimaal te drogen.</p>
             
             <div className="grid md:grid-cols-2 gap-6">
@@ -901,59 +1051,7 @@ const tips: string[] = [];
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Nog meer veelgestelde vragen</h2>
-            <div className="space-y-4">
-              <div>
-                <h3 className="font-semibold text-gray-800">Kan ik babykleding veilig buiten drogen?</h3>
-                <p className="text-gray-600">
-                  Ja, babykleding kan prima buiten drogen en is zelfs aan te raden. De natuurlijke antibacteriële werking van UV-licht van de zon helpt schadelijke bacteriën te doden, wat juist goed is voor de gevoelige huid van baby's. Vermijd wel het gebruik van geparfumeerde wasverzachters en was babykleding apart van de rest om kruisbesmetting te voorkomen. Hang babykleertjes bij voorkeur niet direct in de felle middagzon om verkleuring te vermijden, en zorg ervoor dat ze volledig droog zijn voor je ze opvouwt.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-800">Is buiten drogen hygiënisch genoeg?</h3>
-                <p className="text-gray-600">
-                  Buiten drogen is zelfs hygiënischer dan de meeste andere droogmethodes. UV-straling van zonlicht heeft een sterke desinfecterende werking en doodt bacteriën, schimmels en virussen die wasdrogers niet aankunnen. Verse buitenlucht transporteert micro-organismen weg in plaats van ze rond te blazen in een gesloten systeem. Wel belangrijk: zorg dat je waslijn schoon is, gebruik schone knijpers, en hang nooit vochtige was direct op een vuile ondergrond. Bij zeer vervuilde buitenlucht (bijvoorbeeld tijdens sahara-stof of smog) kun je beter binnen drogen.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-800">Hoe voorkom ik dat mijn was stijf wordt na buiten drogen?</h3>
-                <p className="text-gray-600">
-                  Stijve was na buiten drogen ontstaat doordat natuurlijke mineralen uit hard water in de vezels achterblijven wanneer het water verdampt. Dit kun je grotendeels voorkomen door: 1) Een scheutje witte azijn toe te voegen aan de spoelgang (100ml voor een normale was), 2) Was goed uitschudden voordat je het ophangt en nogmaals als je het binnenhaalt, 3) Kleding binnenhalen zodra het droog is, niet uren later, 4) Een klein beetje wasverzachter gebruiken (minder dan aangegeven op de verpakking). Handdoeken worden vaak het stijfst — schud deze extra goed uit.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-800">Mag je was buiten drogen in een appartementsgebouw?</h3>
-                <p className="text-gray-600">
-                  Dit hangt af van je huurcontract, VvE-reglement en gemeentelijke verordeningen. In de meeste Belgische gemeenten is buiten drogen vanaf de begane grond toegestaan, maar check altijd eerst de lokale regels. Sommige appartementsgebouwen hebben specifieke regels over was op balkons vanwege het uitzicht of druppelwater. Veelvoorkomende beperkingen: geen was aan de straatkant, alleen witte was zichtbaar, of alleen op bepaalde tijden. Als buiten drogen niet mag, zijn gemeenschappelijke droogzolders of wasruimtes vaak een goed alternatief. Informeer bij je verhuurder of VvE-beheerder.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-800">Helpt wasverzachter bij buiten drogen?</h3>
-                <p className="text-gray-600">
-                  Wasverzachter kan inderdaad helpen, vooral om stijfheid te voorkomen die soms optreedt bij buiten drogen. Het legt een dunne laag rond de vezels die ze soepel houdt. Gebruik echter minder dan de aanbevolen hoeveelheid — een derde van de aanbevolen dosis is vaak genoeg. Te veel wasverzachter kan de absorptie van handdoeken verminderen en gevoelige huid irriteren. Een natuurlijk alternatief is witte huishoudazijn (100ml in de spoelgang): dit werkt net zo goed tegen stijfheid en heeft bovendien een ontkalking effect. Voor milieubewuste huishoudens: moderne eco-wasverzachters werken prima en belasten het milieu minder.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-800">Kan ik wollen kleding buiten drogen?</h3>
-                <p className="text-gray-600">
-                  Wollen kleding vergt extra zorg bij buiten drogen. Hang wol nooit rechtop aan een waslijn — dit veroorzaakt uitrekking. Leg wollen items horizontaal op een droogrek of handdoekrek, bij voorkeur in de schaduw want direct zonlicht kan wol doen krimpen en verkleuren. Zorg voor goede luchtcirculatie en draai het kledingstuk om zodra de bovenkant droog is. Vermijd buiten drogen bij harde wind die aan de wol kan trekken. Kasjmier en andere delicate wol droog je beter binnen op een handdoek. Schudde wol nooit hard uit — knijp overtollig water er voorzichtig uit en vorm het kledingstuk terug in de juiste vorm voordat je het laat drogen.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-800">Waarom droogt mijn was niet goed ondanks goed weer?</h3>
-                <p className="text-gray-600">
-                  Er kunnen verschillende oorzaken zijn: 1) Te dicht opgehangen — was heeft ruimte nodig voor luchtcirculatie, 2) Niet goed gecentrifugeerd — moderne wasmachines kunnen vaak tot 1400 toeren, gebruik dit, 3) Te dikke lagen — vouw lakens en handdoeken maar één keer dubbel, 4) Schaduwrijke locatie — ook bij warm weer droogt was slecht zonder luchtstroom, 5) Hoge luchtvochtigheid ondanks goede temperatuur — check dit via weer-apps, 6) Vervuilde waslijn — vuil en vet houden vocht vast. Probeer onze calculator hierboven voor een objectieve inschatting van de droogomstandigheden.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-800">Is het waar dat was sneller droogt op een bewolkte, winderige dag dan op een windstille zonnige dag?</h3>
-                <p className="text-gray-600">
-                  Ja, dat kan inderdaad waar zijn! Wind is vaak belangrijker voor drogen dan zonlicht. Een bewolkte dag met stevige wind (&gt;20 km/u) en lage luchtvochtigheid kan effectiever zijn dan een windstille zonnige dag met hoge luchtvochtigheid. Wind voert voortdurend vochtige lucht weg en brengt droge lucht aan, terwijl zonlicht alleen verhit. De ideale combinatie is natuurlijk zon én wind. Dit is waarom onze calculator alle vier de factoren (temperatuur, luchtvochtigheid, wind, bewolking) meeneemt in plaats van alleen naar de temperatuur te kijken. Het verklaart ook waarom was soms sneller droogt in de herfst dan op een warme maar vochtige zomerdag.
-                </p>
-              </div>
-            </div>
-          </div>
+          <!-- Second FAQ section removed and merged into first FAQ section -->
         </div>
       </main>
     </>
