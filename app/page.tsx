@@ -1051,7 +1051,7 @@ const tips: string[] = [];
             </div>
           </div>
 
-          <!-- Second FAQ section removed and merged into first FAQ section -->
+          {/* Second FAQ section removed and merged into first FAQ section */}
         </div>
       </main>
     </>
