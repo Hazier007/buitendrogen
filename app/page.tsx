@@ -481,6 +481,479 @@ const tips: string[] = [];
               </p>
             </div>
           </div>
+
+          <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-8">
+            <h2 className="text-2xl font-bold text-gray-800 mb-6">Droogtijd per kledingstuk</h2>
+            <p className="text-gray-600 mb-6">Geschatte droogtijden bij verschillende weersomstandigheden. Deze tijden zijn richtwaarden — gebruik onze calculator hierboven voor een nauwkeurige voorspelling.</p>
+            
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-sky-50 border border-sky-100">
+                    <th className="p-3 text-left font-semibold text-gray-800">Kledingstuk</th>
+                    <th className="p-3 text-center font-semibold text-gray-800">Goed weer<br/><span className="text-sm font-normal">(25°C, 40% RV, wind)</span></th>
+                    <th className="p-3 text-center font-semibold text-gray-800">Slecht weer<br/><span className="text-sm font-normal">(15°C, 80% RV, weinig wind)</span></th>
+                    <th className="p-3 text-center font-semibold text-gray-800">Tips</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border border-gray-200">
+                    <td className="p-3 font-medium">T-shirt (katoen)</td>
+                    <td className="p-3 text-center text-green-600 font-semibold">1-2 uur</td>
+                    <td className="p-3 text-center text-orange-600 font-semibold">4-6 uur</td>
+                    <td className="p-3 text-sm text-gray-600">Hang aan onderkant op</td>
+                  </tr>
+                  <tr className="bg-gray-50 border border-gray-200">
+                    <td className="p-3 font-medium">Spijkerbroek</td>
+                    <td className="p-3 text-center text-green-600 font-semibold">3-4 uur</td>
+                    <td className="p-3 text-center text-orange-600 font-semibold">8-12 uur</td>
+                    <td className="p-3 text-sm text-gray-600">Binnenstebuiten hangen</td>
+                  </tr>
+                  <tr className="border border-gray-200">
+                    <td className="p-3 font-medium">Handdoek</td>
+                    <td className="p-3 text-center text-green-600 font-semibold">2-3 uur</td>
+                    <td className="p-3 text-center text-orange-600 font-semibold">6-8 uur</td>
+                    <td className="p-3 text-sm text-gray-600">Goed uitschudden eerst</td>
+                  </tr>
+                  <tr className="bg-gray-50 border border-gray-200">
+                    <td className="p-3 font-medium">Laken</td>
+                    <td className="p-3 text-center text-green-600 font-semibold">1-2 uur</td>
+                    <td className="p-3 text-center text-orange-600 font-semibold">4-6 uur</td>
+                    <td className="p-3 text-sm text-gray-600">Dubbel over de lijn</td>
+                  </tr>
+                  <tr className="border border-gray-200">
+                    <td className="p-3 font-medium">Hoodie/trui</td>
+                    <td className="p-3 text-center text-green-600 font-semibold">4-6 uur</td>
+                    <td className="p-3 text-center text-orange-600 font-semibold">12-24 uur</td>
+                    <td className="p-3 text-sm text-gray-600">Horizontaal drogen</td>
+                  </tr>
+                  <tr className="bg-gray-50 border border-gray-200">
+                    <td className="p-3 font-medium">Sokken</td>
+                    <td className="p-3 text-center text-green-600 font-semibold">30-60 min</td>
+                    <td className="p-3 text-center text-orange-600 font-semibold">2-4 uur</td>
+                    <td className="p-3 text-sm text-gray-600">Aan teen ophangen</td>
+                  </tr>
+                  <tr className="border border-gray-200">
+                    <td className="p-3 font-medium">Ondergoed</td>
+                    <td className="p-3 text-center text-green-600 font-semibold">30-45 min</td>
+                    <td className="p-3 text-center text-orange-600 font-semibold">2-3 uur</td>
+                    <td className="p-3 text-sm text-gray-600">Snelste drogers</td>
+                  </tr>
+                  <tr className="bg-gray-50 border border-gray-200">
+                    <td className="p-3 font-medium">Sportkleding</td>
+                    <td className="p-3 text-center text-green-600 font-semibold">45-90 min</td>
+                    <td className="p-3 text-center text-orange-600 font-semibold">3-5 uur</td>
+                    <td className="p-3 text-sm text-gray-600">Synthetische vezels</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-8">
+            <h2 className="text-2xl font-bold text-gray-800 mb-6">Buiten drogen per seizoen</h2>
+            <p className="text-gray-600 mb-6">Elk seizoen heeft zijn eigen uitdagingen en voordelen voor het drogen van was. Hier vind je wat je kunt verwachten.</p>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-gradient-to-br from-green-50 to-yellow-50 border border-green-100 rounded-xl p-6">
+                <div className="flex items-center mb-4">
+                  <span className="text-2xl mr-3">🌸</span>
+                  <h3 className="text-xl font-bold text-gray-800">Lente (maart-mei)</h3>
+                  <div className="ml-auto flex text-yellow-500">
+                    <span>⭐⭐⭐⭐</span>
+                  </div>
+                </div>
+                <div className="space-y-3 text-sm">
+                  <div><strong>Ideale condities:</strong> 15-20°C, frisse bries, wisselend bewolkt</div>
+                  <div><strong>Gemiddelde droogtijd:</strong> 3-5 uur voor normale was</div>
+                  <div><strong>Aandachtspunten:</strong> Plotse buien mogelijk, pollen in de lucht</div>
+                  <div className="text-green-700"><strong>Tip:</strong> Perfect seizoen om weer te beginnen met buiten drogen!</div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 border border-yellow-100 rounded-xl p-6">
+                <div className="flex items-center mb-4">
+                  <span className="text-2xl mr-3">☀️</span>
+                  <h3 className="text-xl font-bold text-gray-800">Zomer (juni-augustus)</h3>
+                  <div className="ml-auto flex text-yellow-500">
+                    <span>⭐⭐⭐⭐⭐</span>
+                  </div>
+                </div>
+                <div className="space-y-3 text-sm">
+                  <div><strong>Ideale condities:</strong> 25-30°C, droge lucht, veel zon</div>
+                  <div><strong>Gemiddelde droogtijd:</strong> 1-3 uur voor normale was</div>
+                  <div><strong>Aandachtspunten:</strong> Verkleuring door UV, was kan te droog worden</div>
+                  <div className="text-green-700"><strong>Tip:</strong> Hang donkere was binnenstebuiten op</div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-orange-50 to-red-50 border border-orange-100 rounded-xl p-6">
+                <div className="flex items-center mb-4">
+                  <span className="text-2xl mr-3">🍂</span>
+                  <h3 className="text-xl font-bold text-gray-800">Herfst (sept-nov)</h3>
+                  <div className="ml-auto flex text-yellow-500">
+                    <span>⭐⭐⭐</span>
+                  </div>
+                </div>
+                <div className="space-y-3 text-sm">
+                  <div><strong>Ideale condities:</strong> 12-18°C, stevige wind, droge periodes</div>
+                  <div><strong>Gemiddelde droogtijd:</strong> 4-8 uur voor normale was</div>
+                  <div><strong>Aandachtspunten:</strong> Hogere luchtvochtigheid, kortere dagen</div>
+                  <div className="text-green-700"><strong>Tip:</strong> Hang vroeg op de dag, voor de avonddauw</div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 rounded-xl p-6">
+                <div className="flex items-center mb-4">
+                  <span className="text-2xl mr-3">❄️</span>
+                  <h3 className="text-xl font-bold text-gray-800">Winter (dec-feb)</h3>
+                  <div className="ml-auto flex text-yellow-500">
+                    <span>⭐⭐</span>
+                  </div>
+                </div>
+                <div className="space-y-3 text-sm">
+                  <div><strong>Ideale condities:</strong> Droge vorst, heldere dagen, stevige wind</div>
+                  <div><strong>Gemiddelde droogtijd:</strong> 6-24 uur (via sublimatie)</div>
+                  <div><strong>Aandachtspunten:</strong> Was kan bevriezen, veel geduld nodig</div>
+                  <div className="text-green-700"><strong>Tip:</strong> Alleen bij droog winterweer, binnen als alternatief</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-8">
+            <h2 className="text-2xl font-bold text-gray-800 mb-6">Buiten drogen checklist</h2>
+            <p className="text-gray-600 mb-6">Loop deze checklist af voordat je je was buiten hangt om teleurstellingen te voorkomen.</p>
+            
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="space-y-3">
+                <div className="flex items-center bg-sky-50 border border-sky-100 rounded-lg p-3">
+                  <input type="checkbox" className="mr-3 h-4 w-4 text-sky-600" />
+                  <span className="text-gray-700">☀️ Weersverwachting gecontroleerd?</span>
+                </div>
+                <div className="flex items-center bg-sky-50 border border-sky-100 rounded-lg p-3">
+                  <input type="checkbox" className="mr-3 h-4 w-4 text-sky-600" />
+                  <span className="text-gray-700">🌧️ Regenvrije periode van minstens 4 uur?</span>
+                </div>
+                <div className="flex items-center bg-sky-50 border border-sky-100 rounded-lg p-3">
+                  <input type="checkbox" className="mr-3 h-4 w-4 text-sky-600" />
+                  <span className="text-gray-700">🌀 Genoeg wind (>10 km/u)?</span>
+                </div>
+                <div className="flex items-center bg-sky-50 border border-sky-100 rounded-lg p-3">
+                  <input type="checkbox" className="mr-3 h-4 w-4 text-sky-600" />
+                  <span className="text-gray-700">📏 Waslijn/droogrek vrij en schoon?</span>
+                </div>
+                <div className="flex items-center bg-sky-50 border border-sky-100 rounded-lg p-3">
+                  <input type="checkbox" className="mr-3 h-4 w-4 text-sky-600" />
+                  <span className="text-gray-700">📎 Voldoende wasknijpers beschikbaar?</span>
+                </div>
+                <div className="flex items-center bg-sky-50 border border-sky-100 rounded-lg p-3">
+                  <input type="checkbox" className="mr-3 h-4 w-4 text-sky-600" />
+                  <span className="text-gray-700">💧 Was goed gecentrifugeerd?</span>
+                </div>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-center bg-sky-50 border border-sky-100 rounded-lg p-3">
+                  <input type="checkbox" className="mr-3 h-4 w-4 text-sky-600" />
+                  <span className="text-gray-700">🎯 Droge, zonnige plek gekozen?</span>
+                </div>
+                <div className="flex items-center bg-sky-50 border border-sky-100 rounded-lg p-3">
+                  <input type="checkbox" className="mr-3 h-4 w-4 text-sky-600" />
+                  <span className="text-gray-700">🔄 Donkere kleding binnenstebuiten?</span>
+                </div>
+                <div className="flex items-center bg-sky-50 border border-sky-100 rounded-lg p-3">
+                  <input type="checkbox" className="mr-3 h-4 w-4 text-sky-600" />
+                  <span className="text-gray-700">📐 Voldoende ruimte tussen kledingstukken?</span>
+                </div>
+                <div className="flex items-center bg-sky-50 border border-sky-100 rounded-lg p-3">
+                  <input type="checkbox" className="mr-3 h-4 w-4 text-sky-600" />
+                  <span className="text-gray-700">⏰ Tijd om was op tijd binnen te halen?</span>
+                </div>
+                <div className="flex items-center bg-sky-50 border border-sky-100 rounded-lg p-3">
+                  <input type="checkbox" className="mr-3 h-4 w-4 text-sky-600" />
+                  <span className="text-gray-700">🏠 Plan B klaar als het regent?</span>
+                </div>
+                <div className="flex items-center bg-sky-50 border border-sky-100 rounded-lg p-3">
+                  <input type="checkbox" className="mr-3 h-4 w-4 text-sky-600" />
+                  <span className="text-gray-700">🧺 Wasmand klaar voor als het droog is?</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-xl">
+              <div className="text-green-800">
+                <strong>🎯 Pro tip:</strong> Sla deze pagina op als bladwijzer en gebruik de checklist elke keer. Na een paar keer wordt het routine!
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-8">
+            <h2 className="text-2xl font-bold text-gray-800 mb-6">Vergelijking droogmethodes</h2>
+            <p className="text-gray-600 mb-6">Welke droogmethode past het best bij jouw situatie? Vergelijk de voor- en nadelen van elke optie.</p>
+            
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-sky-50 border border-sky-100">
+                    <th className="p-3 text-left font-semibold text-gray-800">Methode</th>
+                    <th className="p-3 text-center font-semibold text-gray-800">Kosten<br/><span className="text-xs font-normal">per wasbeurt</span></th>
+                    <th className="p-3 text-center font-semibold text-gray-800">Tijd</th>
+                    <th className="p-3 text-center font-semibold text-gray-800">Milieu-impact</th>
+                    <th className="p-3 text-center font-semibold text-gray-800">Effect op kleding</th>
+                    <th className="p-3 text-center font-semibold text-gray-800">Geschiktheid</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border border-gray-200">
+                    <td className="p-3 font-medium text-green-700">🌞 Buiten drogen</td>
+                    <td className="p-3 text-center">
+                      <span className="text-green-600 font-semibold">€0,00</span><br/>
+                      <span className="text-xs text-gray-500">Enkel elektriciteit wasmachine</span>
+                    </td>
+                    <td className="p-3 text-center">
+                      <span className="text-orange-600">2-8 uur</span><br/>
+                      <span className="text-xs text-gray-500">Afhankelijk van weer</span>
+                    </td>
+                    <td className="p-3 text-center">
+                      <span className="text-green-600 font-semibold">Uitstekend</span><br/>
+                      <span className="text-xs text-gray-500">Geen extra energie</span>
+                    </td>
+                    <td className="p-3 text-center">
+                      <span className="text-green-600">Zeer zacht</span><br/>
+                      <span className="text-xs text-gray-500">Natuurlijke frisheid</span>
+                    </td>
+                    <td className="p-3 text-center">
+                      <span className="text-orange-600">Weerafhankelijk</span><br/>
+                      <span className="text-xs text-gray-500">Buitenruimte nodig</span>
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50 border border-gray-200">
+                    <td className="p-3 font-medium">🔥 Wasdroger (condensdroger)</td>
+                    <td className="p-3 text-center">
+                      <span className="text-red-600 font-semibold">€1,20</span><br/>
+                      <span className="text-xs text-gray-500">4 kWh × €0,30</span>
+                    </td>
+                    <td className="p-3 text-center">
+                      <span className="text-green-600">60-90 min</span><br/>
+                      <span className="text-xs text-gray-500">Snel en betrouwbaar</span>
+                    </td>
+                    <td className="p-3 text-center">
+                      <span className="text-red-600">Slecht</span><br/>
+                      <span className="text-xs text-gray-500">Hoog energieverbruik</span>
+                    </td>
+                    <td className="p-3 text-center">
+                      <span className="text-orange-600">Matig</span><br/>
+                      <span className="text-xs text-gray-500">Slijtage door hitte</span>
+                    </td>
+                    <td className="p-3 text-center">
+                      <span className="text-green-600">Altijd</span><br/>
+                      <span className="text-xs text-gray-500">Onafhankelijk van weer</span>
+                    </td>
+                  </tr>
+                  <tr className="border border-gray-200">
+                    <td className="p-3 font-medium">🏠 Binnen op rek</td>
+                    <td className="p-3 text-center">
+                      <span className="text-green-600 font-semibold">€0,00</span><br/>
+                      <span className="text-xs text-gray-500">Geen extra kosten</span>
+                    </td>
+                    <td className="p-3 text-center">
+                      <span className="text-orange-600">6-12 uur</span><br/>
+                      <span className="text-xs text-gray-500">Langzaam proces</span>
+                    </td>
+                    <td className="p-3 text-center">
+                      <span className="text-green-600">Goed</span><br/>
+                      <span className="text-xs text-gray-500">Geen extra energie</span>
+                    </td>
+                    <td className="p-3 text-center">
+                      <span className="text-green-600">Zacht</span><br/>
+                      <span className="text-xs text-gray-500">Geen hitteschade</span>
+                    </td>
+                    <td className="p-3 text-center">
+                      <span className="text-orange-600">Beperkt</span><br/>
+                      <span className="text-xs text-gray-500">Vochtproblemen mogelijk</span>
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50 border border-gray-200">
+                    <td className="p-3 font-medium">♻️ Warmtepomp droger</td>
+                    <td className="p-3 text-center">
+                      <span className="text-orange-600 font-semibold">€0,60</span><br/>
+                      <span className="text-xs text-gray-500">2 kWh × €0,30</span>
+                    </td>
+                    <td className="p-3 text-center">
+                      <span className="text-orange-600">120-180 min</span><br/>
+                      <span className="text-xs text-gray-500">Langzamer dan condensdroger</span>
+                    </td>
+                    <td className="p-3 text-center">
+                      <span className="text-orange-600">Redelijk</span><br/>
+                      <span className="text-xs text-gray-500">Lager verbruik</span>
+                    </td>
+                    <td className="p-3 text-center">
+                      <span className="text-green-600">Goed</span><br/>
+                      <span className="text-xs text-gray-500">Lagere temperaturen</span>
+                    </td>
+                    <td className="p-3 text-center">
+                      <span className="text-green-600">Altijd</span><br/>
+                      <span className="text-xs text-gray-500">Beste droger-optie</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div className="mt-6 grid md:grid-cols-3 gap-4">
+              <div className="bg-green-50 border border-green-200 rounded-xl p-4">
+                <h3 className="font-semibold text-green-800 mb-2">🏆 Voor het milieu</h3>
+                <p className="text-sm text-green-700">1. Buiten drogen<br/>2. Binnen op rek<br/>3. Warmtepomp droger<br/>4. Condensdroger</p>
+              </div>
+              <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
+                <h3 className="font-semibold text-blue-800 mb-2">💰 Voor de portemonnee</h3>
+                <p className="text-sm text-blue-700">1. Buiten/binnen (gratis)<br/>2. Warmtepomp droger<br/>3. Condensdroger</p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-xl p-4">
+                <h3 className="font-semibold text-purple-800 mb-2">⚡ Voor snelheid</h3>
+                <p className="text-sm text-purple-700">1. Condensdroger<br/>2. Buiten (goed weer)<br/>3. Warmtepomp droger<br/>4. Binnen op rek</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-8">
+            <h2 className="text-2xl font-bold text-gray-800 mb-6">Regionale droogtips voor België</h2>
+            <p className="text-gray-600 mb-6">België kent verschillende microklimaats. Hier zijn specifieke tips per regio om optimaal te drogen.</p>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-100 rounded-xl p-6">
+                <div className="flex items-center mb-4">
+                  <span className="text-2xl mr-3">🌊</span>
+                  <h3 className="text-xl font-bold text-gray-800">Kust (West-Vlaanderen)</h3>
+                </div>
+                <div className="space-y-3 text-sm">
+                  <div><strong>Voordelen:</strong> Meer wind, minder extreme temperaturen</div>
+                  <div><strong>Uitdagingen:</strong> Zilte zeelucht, hogere luchtvochtigheid</div>
+                  <div className="text-blue-700"><strong>Tips:</strong></div>
+                  <ul className="text-blue-700 ml-4 space-y-1">
+                    <li>• Was regelmatig naspoelen bij zilte lucht</li>
+                    <li>• Profiteer van de constante zeebries</li>
+                    <li>• Knijpers spoelen door corrosie door zout</li>
+                    <li>• Was sneller droog door wind, maar kan stijver aanvoelen</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-100 rounded-xl p-6">
+                <div className="flex items-center mb-4">
+                  <span className="text-2xl mr-3">🌲</span>
+                  <h3 className="text-xl font-bold text-gray-800">Ardennen (Namen, Luxemburg)</h3>
+                </div>
+                <div className="space-y-3 text-sm">
+                  <div><strong>Voordelen:</strong> Droge lucht, minder luchtvervuiling</div>
+                  <div><strong>Uitdagingen:</strong> Koelere temperaturen, schaduwrijke locaties</div>
+                  <div className="text-green-700"><strong>Tips:</strong></div>
+                  <ul className="text-green-700 ml-4 space-y-1">
+                    <li>• Zoek een open, zonnige plek op de helling</li>
+                    <li>• Start vroeger op de dag door kortere zonneduur</li>
+                    <li>• Profiteer van de heldere, droge berglucht</li>
+                    <li>• Let op nachtvorst in voor- en najaar</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 border border-yellow-100 rounded-xl p-6">
+                <div className="flex items-center mb-4">
+                  <span className="text-2xl mr-3">🌾</span>
+                  <h3 className="text-xl font-bold text-gray-800">Vlaanderen (Antwerpen, Limburg)</h3>
+                </div>
+                <div className="space-y-3 text-sm">
+                  <div><strong>Voordelen:</strong> Gemiddeld Belgisch klimaat, open vlakten</div>
+                  <div><strong>Uitdagingen:</strong> Variabel weer, soms stilstand door bebouwing</div>
+                  <div className="text-orange-700"><strong>Tips:</strong></div>
+                  <ul className="text-orange-700 ml-4 space-y-1">
+                    <li>• Gebruik onze calculator voor accurate voorspellingen</li>
+                    <li>• Let extra op weersveranderingen</li>
+                    <li>• Profiteer van de open landschappen voor wind</li>
+                    <li>• Ideaal referentieklimaat voor droogtijden</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-gray-50 to-slate-50 border border-gray-200 rounded-xl p-6">
+                <div className="flex items-center mb-4">
+                  <span className="text-2xl mr-3">🏙️</span>
+                  <h3 className="text-xl font-bold text-gray-800">Brussel & omgeving</h3>
+                </div>
+                <div className="space-y-3 text-sm">
+                  <div><strong>Voordelen:</strong> Stedelijk warmte-eiland, beschutting</div>
+                  <div><strong>Uitdagingen:</strong> Luchtvervuiling, minder wind, beperkte ruimte</div>
+                  <div className="text-gray-700"><strong>Tips:</strong></div>
+                  <ul className="text-gray-700 ml-4 space-y-1">
+                    <li>• Profiteer van 2-3°C hogere temperaturen</li>
+                    <li>• Was vaker spoelen door vervuiling</li>
+                    <li>• Zoek winderige binnentuinen of dakterrassen</li>
+                    <li>• Overweeg binnen drogen bij smog-alarmen</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-6 p-4 bg-sky-50 border border-sky-200 rounded-xl">
+              <div className="text-sky-800">
+                <strong>🎯 Algemene tip voor heel België:</strong> Het weer kan binnen een paar kilometer al flink verschillen. Lokale weervoorspellingen zijn betrouwbaarder dan landelijke. Gebruik onze tool met je specifieke stad voor de beste resultaten!
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-8">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">Nog meer veelgestelde vragen</h2>
+            <div className="space-y-4">
+              <div>
+                <h3 className="font-semibold text-gray-800">Kan ik babykleding veilig buiten drogen?</h3>
+                <p className="text-gray-600">
+                  Ja, babykleding kan prima buiten drogen en is zelfs aan te raden. De natuurlijke antibacteriële werking van UV-licht van de zon helpt schadelijke bacteriën te doden, wat juist goed is voor de gevoelige huid van baby's. Vermijd wel het gebruik van geparfumeerde wasverzachters en was babykleding apart van de rest om kruisbesmetting te voorkomen. Hang babykleertjes bij voorkeur niet direct in de felle middagzon om verkleuring te vermijden, en zorg ervoor dat ze volledig droog zijn voor je ze opvouwt.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-800">Is buiten drogen hygiënisch genoeg?</h3>
+                <p className="text-gray-600">
+                  Buiten drogen is zelfs hygiënischer dan de meeste andere droogmethodes. UV-straling van zonlicht heeft een sterke desinfecterende werking en doodt bacteriën, schimmels en virussen die wasdrogers niet aankunnen. Verse buitenlucht transporteert micro-organismen weg in plaats van ze rond te blazen in een gesloten systeem. Wel belangrijk: zorg dat je waslijn schoon is, gebruik schone knijpers, en hang nooit vochtige was direct op een vuile ondergrond. Bij zeer vervuilde buitenlucht (bijvoorbeeld tijdens sahara-stof of smog) kun je beter binnen drogen.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-800">Hoe voorkom ik dat mijn was stijf wordt na buiten drogen?</h3>
+                <p className="text-gray-600">
+                  Stijve was na buiten drogen ontstaat doordat natuurlijke mineralen uit hard water in de vezels achterblijven wanneer het water verdampt. Dit kun je grotendeels voorkomen door: 1) Een scheutje witte azijn toe te voegen aan de spoelgang (100ml voor een normale was), 2) Was goed uitschudden voordat je het ophangt en nogmaals als je het binnenhaalt, 3) Kleding binnenhalen zodra het droog is, niet uren later, 4) Een klein beetje wasverzachter gebruiken (minder dan aangegeven op de verpakking). Handdoeken worden vaak het stijfst — schud deze extra goed uit.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-800">Mag je was buiten drogen in een appartementsgebouw?</h3>
+                <p className="text-gray-600">
+                  Dit hangt af van je huurcontract, VvE-reglement en gemeentelijke verordeningen. In de meeste Belgische gemeenten is buiten drogen vanaf de begane grond toegestaan, maar check altijd eerst de lokale regels. Sommige appartementsgebouwen hebben specifieke regels over was op balkons vanwege het uitzicht of druppelwater. Veelvoorkomende beperkingen: geen was aan de straatkant, alleen witte was zichtbaar, of alleen op bepaalde tijden. Als buiten drogen niet mag, zijn gemeenschappelijke droogzolders of wasruimtes vaak een goed alternatief. Informeer bij je verhuurder of VvE-beheerder.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-800">Helpt wasverzachter bij buiten drogen?</h3>
+                <p className="text-gray-600">
+                  Wasverzachter kan inderdaad helpen, vooral om stijfheid te voorkomen die soms optreedt bij buiten drogen. Het legt een dunne laag rond de vezels die ze soepel houdt. Gebruik echter minder dan de aanbevolen hoeveelheid — een derde van de aanbevolen dosis is vaak genoeg. Te veel wasverzachter kan de absorptie van handdoeken verminderen en gevoelige huid irriteren. Een natuurlijk alternatief is witte huishoudazijn (100ml in de spoelgang): dit werkt net zo goed tegen stijfheid en heeft bovendien een ontkalking effect. Voor milieubewuste huishoudens: moderne eco-wasverzachters werken prima en belasten het milieu minder.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-800">Kan ik wollen kleding buiten drogen?</h3>
+                <p className="text-gray-600">
+                  Wollen kleding vergt extra zorg bij buiten drogen. Hang wol nooit rechtop aan een waslijn — dit veroorzaakt uitrekking. Leg wollen items horizontaal op een droogrek of handdoekrek, bij voorkeur in de schaduw want direct zonlicht kan wol doen krimpen en verkleuren. Zorg voor goede luchtcirculatie en draai het kledingstuk om zodra de bovenkant droog is. Vermijd buiten drogen bij harde wind die aan de wol kan trekken. Kasjmier en andere delicate wol droog je beter binnen op een handdoek. Schudde wol nooit hard uit — knijp overtollig water er voorzichtig uit en vorm het kledingstuk terug in de juiste vorm voordat je het laat drogen.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-800">Waarom droogt mijn was niet goed ondanks goed weer?</h3>
+                <p className="text-gray-600">
+                  Er kunnen verschillende oorzaken zijn: 1) Te dicht opgehangen — was heeft ruimte nodig voor luchtcirculatie, 2) Niet goed gecentrifugeerd — moderne wasmachines kunnen vaak tot 1400 toeren, gebruik dit, 3) Te dikke lagen — vouw lakens en handdoeken maar één keer dubbel, 4) Schaduwrijke locatie — ook bij warm weer droogt was slecht zonder luchtstroom, 5) Hoge luchtvochtigheid ondanks goede temperatuur — check dit via weer-apps, 6) Vervuilde waslijn — vuil en vet houden vocht vast. Probeer onze calculator hierboven voor een objectieve inschatting van de droogomstandigheden.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-800">Is het waar dat was sneller droogt op een bewolkte, winderige dag dan op een windstille zonnige dag?</h3>
+                <p className="text-gray-600">
+                  Ja, dat kan inderdaad waar zijn! Wind is vaak belangrijker voor drogen dan zonlicht. Een bewolkte dag met stevige wind (>20 km/u) en lage luchtvochtigheid kan effectiever zijn dan een windstille zonnige dag met hoge luchtvochtigheid. Wind voert voortdurend vochtige lucht weg en brengt droge lucht aan, terwijl zonlicht alleen verhit. De ideale combinatie is natuurlijk zon én wind. Dit is waarom onze calculator alle vier de factoren (temperatuur, luchtvochtigheid, wind, bewolking) meeneemt in plaats van alleen naar de temperatuur te kijken. Het verklaart ook waarom was soms sneller droogt in de herfst dan op een warme maar vochtige zomerdag.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
     </>
