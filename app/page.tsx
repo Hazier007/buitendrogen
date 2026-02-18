@@ -205,19 +205,19 @@ const tips: string[] = [];
 
             <div className="mb-6">
               <label className="block text-gray-700 font-medium mb-2">Jouw locatie</label>
-              <div className="flex gap-3">
+              <div className="flex flex-col sm:flex-row gap-3">
                 <input
                   type="text"
                   value={city}
                   onChange={(e) => setCity(e.target.value)}
                   onKeyDown={(e) => e.key === 'Enter' && fetchWeather()}
                   placeholder="Bijv. Gent, Antwerpen, Brussel..."
-                  className="flex-1 px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-sky-500 focus:outline-none text-lg"
+                  className="flex-1 min-w-0 px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-sky-500 focus:outline-none text-lg"
                 />
                 <button
                   onClick={fetchWeather}
                   disabled={loading}
-                  className="px-6 py-3 bg-sky-500 hover:bg-sky-600 disabled:bg-gray-400 text-white font-semibold rounded-xl transition-colors"
+                  className="shrink-0 px-6 py-3 bg-sky-500 hover:bg-sky-600 disabled:bg-gray-400 text-white font-semibold rounded-xl transition-colors"
                 >
                   {loading ? '...' : 'Check'}
                 </button>

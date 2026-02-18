@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useEffect, useMemo, useState } from 'react';
 
@@ -72,7 +72,7 @@ export default function CookieBanner() {
                 (GA4) en advertenties (Google AdSense).
               </p>
               <p className="mt-2 text-xs text-gray-500">
-                Je kan dit later aanpassen via â€œCookie-instellingenâ€ in de footer.
+                Je kan dit later aanpassen via "Cookie-instellingen" in de footer.
               </p>
             </div>
             <div className="flex flex-col gap-2 sm:min-w-[220px]">

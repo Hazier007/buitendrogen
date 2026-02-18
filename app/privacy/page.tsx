@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Privacybeleid | Buitendrogen.be',
@@ -20,7 +20,7 @@ export default function Page() {
 <h2>2. Welke gegevens verzamelen we?</h2>
 <ul>
   <li>Technische gegevens (bv. IP-adres, browser, toesteltype)</li>
-  <li>Gebruiksgegevens (bv. bezochte paginaâ€™s, klikgedrag)</li>
+  <li>Gebruiksgegevens (bv. bezochte pagina’s, klikgedrag)</li>
   <li>Contactgegevens die je zelf doorstuurt via e-mail</li>
 </ul>
 <h2>3. Waarom verzamelen we gegevens?</h2>
@@ -29,9 +29,9 @@ export default function Page() {
   <li>statistieken te maken en de site te verbeteren (analytics)</li>
   <li>advertenties te tonen en te meten (advertising)</li>
 </ul>
-<h2>4. Cookies &amp; vergelijkbare technologieÃ«n</h2>
+<h2>4. Cookies &amp; vergelijkbare technologieën</h2>
 <p>
-  We gebruiken cookies en gelijkaardige technologieÃ«n. Details vind je in het <a href="/cookies">Cookiebeleid</a>. Je kan je voorkeuren altijd aanpassen via de cookie-instellingen.
+  We gebruiken cookies en gelijkaardige technologieën. Details vind je in het <a href="/cookies">Cookiebeleid</a>. Je kan je voorkeuren altijd aanpassen via de cookie-instellingen.
 </p>
 <h2>5. Analytics</h2>
 <p>We gebruiken <strong>Google Analytics 4 (GA4)</strong> om inzicht te krijgen in het gebruik van de website.</p>
