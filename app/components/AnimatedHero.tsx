@@ -2,97 +2,79 @@
 
 export default function AnimatedHero() {
   return (
-    <div className="relative bg-gradient-to-b from-sky-400 via-sky-500 to-blue-600 text-white py-16 px-4 overflow-hidden">
-      {/* Animated Clouds */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Cloud 1 */}
-        <div className="cloud cloud-1 absolute">
-          <svg viewBox="0 0 200 100" className="w-32 h-16 text-white/30">
-            <ellipse cx="60" cy="60" rx="50" ry="30" fill="currentColor" />
-            <ellipse cx="100" cy="50" rx="60" ry="40" fill="currentColor" />
-            <ellipse cx="150" cy="60" rx="45" ry="28" fill="currentColor" />
-          </svg>
-        </div>
-        
-        {/* Cloud 2 */}
-        <div className="cloud cloud-2 absolute">
-          <svg viewBox="0 0 200 100" className="w-40 h-20 text-white/20">
-            <ellipse cx="60" cy="60" rx="50" ry="30" fill="currentColor" />
-            <ellipse cx="100" cy="50" rx="60" ry="40" fill="currentColor" />
-            <ellipse cx="150" cy="60" rx="45" ry="28" fill="currentColor" />
-          </svg>
-        </div>
-        
-        {/* Cloud 3 */}
-        <div className="cloud cloud-3 absolute">
-          <svg viewBox="0 0 200 100" className="w-24 h-12 text-white/25">
-            <ellipse cx="60" cy="60" rx="50" ry="30" fill="currentColor" />
-            <ellipse cx="100" cy="50" rx="60" ry="40" fill="currentColor" />
-            <ellipse cx="150" cy="60" rx="45" ry="28" fill="currentColor" />
-          </svg>
-        </div>
-        
-        {/* Cloud 4 */}
-        <div className="cloud cloud-4 absolute">
-          <svg viewBox="0 0 200 100" className="w-36 h-18 text-white/15">
-            <ellipse cx="60" cy="60" rx="50" ry="30" fill="currentColor" />
-            <ellipse cx="100" cy="50" rx="60" ry="40" fill="currentColor" />
-            <ellipse cx="150" cy="60" rx="45" ry="28" fill="currentColor" />
-          </svg>
+    <section className="relative overflow-hidden bg-gradient-to-b from-sky-400 to-blue-600 text-white">
+      {/* Animated background elements */}
+      <div className="absolute inset-0">
+        {/* Animated sun */}
+        <div className="absolute top-6 right-8 w-16 h-16 bg-yellow-300 rounded-full opacity-80 animate-pulse">
+          <div className="absolute inset-0 w-full h-full bg-yellow-200 rounded-full animate-ping opacity-40"></div>
         </div>
 
-        {/* Cloud 5 */}
-        <div className="cloud cloud-5 absolute">
-          <svg viewBox="0 0 200 100" className="w-28 h-14 text-white/20">
-            <ellipse cx="60" cy="60" rx="50" ry="30" fill="currentColor" />
-            <ellipse cx="100" cy="50" rx="60" ry="40" fill="currentColor" />
-            <ellipse cx="150" cy="60" rx="45" ry="28" fill="currentColor" />
-          </svg>
+        {/* Animated clouds */}
+        <div className="absolute top-4 left-0 w-24 h-12 opacity-70">
+          <div className="cloud-1 relative">
+            <div className="w-8 h-8 bg-white rounded-full absolute top-2 left-0"></div>
+            <div className="w-12 h-10 bg-white rounded-full absolute top-0 left-4"></div>
+            <div className="w-6 h-6 bg-white rounded-full absolute top-3 left-12"></div>
+          </div>
         </div>
 
-        {/* Sun */}
-        <div className="absolute top-8 right-8 md:right-16">
-          <div className="w-20 h-20 md:w-28 md:h-28 bg-yellow-300 rounded-full animate-pulse shadow-[0_0_60px_rgba(253,224,71,0.6)]" />
+        <div className="absolute top-12 left-1/4 w-20 h-10 opacity-60">
+          <div className="cloud-2 relative">
+            <div className="w-6 h-6 bg-white rounded-full absolute top-2 left-0"></div>
+            <div className="w-10 h-8 bg-white rounded-full absolute top-0 left-3"></div>
+            <div className="w-4 h-4 bg-white rounded-full absolute top-3 left-9"></div>
+          </div>
+        </div>
+
+        <div className="absolute top-8 right-1/3 w-16 h-8 opacity-50">
+          <div className="cloud-3 relative">
+            <div className="w-4 h-4 bg-white rounded-full absolute top-2 left-0"></div>
+            <div className="w-8 h-6 bg-white rounded-full absolute top-0 left-2"></div>
+            <div className="w-3 h-3 bg-white rounded-full absolute top-2 left-7"></div>
+          </div>
+        </div>
+
+        {/* Clothesline silhouette (optional) */}
+        <div className="absolute bottom-16 left-1/4 right-1/4 h-1 bg-white/40">
+          {/* T-shirt */}
+          <div className="absolute -top-8 left-8 w-6 h-8 bg-white/30 rounded-sm animate-bounce-slow">
+            <div className="absolute -top-1 left-1 w-4 h-2 bg-white/30 rounded-t"></div>
+          </div>
+          {/* Towel */}
+          <div className="absolute -top-10 left-20 w-4 h-10 bg-white/20 rounded-sm animate-sway"></div>
+          {/* Socks */}
+          <div className="absolute -top-4 left-32 w-2 h-4 bg-white/25 rounded animate-bounce-slow"></div>
+          <div className="absolute -top-4 left-36 w-2 h-4 bg-white/25 rounded animate-bounce-slow delay-150"></div>
         </div>
       </div>
 
-      {/* Content */}
-      <div className="max-w-4xl mx-auto text-center relative z-10">
-        <div className="text-6xl md:text-7xl mb-4 animate-bounce-slow">🧺</div>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg">
-          Buiten Drogen Calculator
-        </h1>
-        <p className="text-xl md:text-2xl opacity-90 drop-shadow max-w-2xl mx-auto">
-          Bereken hoe lang je was nodig heeft om buiten te drogen op basis van het actuele weer
+      <div className="relative mx-auto max-w-5xl px-4 py-14 text-center z-10">
+        <h1 className="text-4xl md:text-5xl font-bold">Buiten Drogen Calculator</h1>
+        <p className="mt-4 text-lg opacity-90">
+          Bereken hoe lang je was nodig heeft om buiten te drogen op basis van het actuele weer.
         </p>
       </div>
 
-      {/* Bottom Wave */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 120" className="w-full h-12 md:h-16">
-          <path
-            fill="#f0f9ff"
-            d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"
-          />
-        </svg>
-      </div>
-
       <style jsx>{`
-        @keyframes float-cloud {
-          0% {
-            transform: translateX(-100%);
-          }
-          100% {
-            transform: translateX(calc(100vw + 100%));
-          }
+        .cloud-1 {
+          animation: float-right 25s ease-in-out infinite;
         }
-
-        @keyframes bounce-slow {
-          0%, 100% {
-            transform: translateY(0);
+        .cloud-2 {
+          animation: float-right 30s ease-in-out infinite;
+          animation-delay: -5s;
+        }
+        .cloud-3 {
+          animation: float-right 35s ease-in-out infinite;
+          animation-delay: -10s;
+        }
+        
+        @keyframes float-right {
+          from {
+            transform: translateX(-120px);
           }
-          50% {
-            transform: translateY(-10px);
+          to {
+            transform: translateX(calc(100vw + 120px));
           }
         }
 
@@ -100,40 +82,32 @@ export default function AnimatedHero() {
           animation: bounce-slow 3s ease-in-out infinite;
         }
 
-        .cloud {
-          animation: float-cloud linear infinite;
+        .animate-sway {
+          animation: sway 4s ease-in-out infinite;
         }
 
-        .cloud-1 {
-          top: 10%;
-          animation-duration: 35s;
-          animation-delay: 0s;
+        @keyframes bounce-slow {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-4px);
+          }
         }
 
-        .cloud-2 {
-          top: 25%;
-          animation-duration: 45s;
-          animation-delay: -10s;
+        @keyframes sway {
+          0%, 100% {
+            transform: rotate(-2deg);
+          }
+          50% {
+            transform: rotate(2deg);
+          }
         }
 
-        .cloud-3 {
-          top: 50%;
-          animation-duration: 30s;
-          animation-delay: -5s;
-        }
-
-        .cloud-4 {
-          top: 70%;
-          animation-duration: 50s;
-          animation-delay: -20s;
-        }
-
-        .cloud-5 {
-          top: 35%;
-          animation-duration: 40s;
-          animation-delay: -15s;
+        .delay-150 {
+          animation-delay: 0.15s;
         }
       `}</style>
-    </div>
+    </section>
   );
 }
