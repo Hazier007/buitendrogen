@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import CookieBanner from "./components/CookieBanner";
 import LegalBar from "./components/LegalBar";
 import Analytics from "./components/Analytics";
@@ -12,5 +12,6 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 export const metadata: Metadata = { title: "Buiten Drogen Calculator | Bereken de droogtijd van je was", description: "Bereken hoe lang je was nodig heeft om buiten te drogen. Gratis tool die rekening houdt met temperatuur, luchtvochtigheid, wind en bewolking.", keywords: "buiten drogen, was drogen, droogtijd berekenen, wasgoed drogen, was buiten, droogweer, wasdroger alternatief", openGraph: { title: "Buiten Drogen Calculator | Buitendrogen.be", description: "Bereken hoe lang je was nodig heeft om buiten te drogen op basis van het actuele weer.", type: "website", locale: "nl_BE", },
 };
 export default function RootLayout({ children,
-}: Readonly<{ children: React.ReactNode }>) { return ( <html lang="nl"> {" "} <head> {" "} <meta name="google-adsense-account" content="ca-pub-1772283634325864" />{" "} <Analytics gaId="G-G9KPQS152Y" />{" "} </head>{" "} <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} > {" "} {children} <CookieBanner /> <LegalBar /> <FloatingShare />{" "} </body>{" "} </html> );
+}: Readonly<{ children: React.ReactNode }>) { return ( <html lang="nl"> {" "} <head>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1772283634325864" crossOrigin="anonymous"></script> {" "} <meta name="google-adsense-account" content="ca-pub-1772283634325864" />{" "} <Analytics gaId="G-G9KPQS152Y" />{" "} </head>{" "} <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} > {" "} {children} <CookieBanner /> <LegalBar /> <FloatingShare />{" "} </body>{" "} </html> );
 } 
