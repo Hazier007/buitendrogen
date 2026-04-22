@@ -23,6 +23,11 @@ export default function FloatingShare() {
   const pathname = usePathname();
   const [url, setUrl] = useState<string>('');
   const [isMobile, setIsMobile] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     setUrl(window.location.href);
@@ -73,7 +78,7 @@ export default function FloatingShare() {
     }
   }
 
-  if (!url) return null;
+  if (!mounted || !url) return null;
 
   const size = isMobile ? 38 : 44;
   const gap = isMobile ? 6 : 8;
@@ -153,7 +158,7 @@ export default function FloatingShare() {
       >
         Copy
       </button>
-      {typeof navigator !== 'undefined' && 'share' in navigator && (
+      {'share' in navigator && (
         <button
           type="button"
           onClick={nativeShare}
