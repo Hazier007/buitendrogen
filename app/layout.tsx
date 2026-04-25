@@ -13,5 +13,6 @@ export const metadata: Metadata = { title: "Buiten Drogen Calculator | Bereken d
 };
 export default function RootLayout({ children,
 }: Readonly<{ children: React.ReactNode }>) { return ( <html lang="nl"> {" "} <head>
+        <script async src="https://fundingchoicesmessages.google.com/i/pub-1772283634325864?ers=1" crossOrigin="anonymous"></script>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1772283634325864" crossOrigin="anonymous"></script> {" "} <meta name="google-adsense-account" content="ca-pub-1772283634325864" />{" "} <Analytics gaId="G-G9KPQS152Y" />{" "} </head>{" "} <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} > {" "} {children} <CookieBanner /> <LegalBar /> <FloatingShare />{" "} </body>{" "} </html> );
 } 
