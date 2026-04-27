@@ -1,9 +1,18 @@
 ﻿'use client';
 
 import Link from 'next/link';
+
+declare global {
+  interface Window {
+    googlefc?: {
+      showRevocationMessage?: () => void;
+    };
+  }
+}
+
 export default function LegalBar() {
   const openCookieSettings = () => {
-    window.dispatchEvent(new Event('open-cookie-banner'));
+    window.googlefc?.showRevocationMessage?.();
   };
 
   return (
