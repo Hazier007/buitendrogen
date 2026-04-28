@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Header from './components/Header';
 import FloatingShare from './components/FloatingShare';
 import AnimatedHero from './components/AnimatedHero';
-import BolAffiliateCard from './components/BolAffiliateCard';
 
 interface WeatherData {
   temp: number;
@@ -321,8 +320,6 @@ const tips: string[] = [];
                     </ul>
                   </div>
                 )}
-
-                <BolAffiliateCard />
               </div>
             )}
           </div>
