@@ -85,6 +85,24 @@ export default function GemeenteClient({ gemeente, initialWeather }: Props) {
       .slice(0, 6);
   }, [gemeente.province, gemeente.slug]);
 
+  const localGuides = [
+    {
+      href: "/gids/was-buiten-drogen-bij-hoge-luchtvochtigheid",
+      label: "Luchtvochtigheid gids",
+      summary: "Wat te doen op vochtige dagen",
+    },
+    {
+      href: "/gids/was-buiten-drogen-15-graden",
+      label: "15 graden gids",
+      summary: "Realistische droogtijden",
+    },
+    {
+      href: "/gids/beste-moment-om-was-buiten-te-hangen",
+      label: "Timing gids",
+      summary: "Beste moment om op te hangen",
+    },
+  ];
+
   useEffect(() => {
     if (initialWeather) return;
 
@@ -164,6 +182,25 @@ export default function GemeenteClient({ gemeente, initialWeather }: Props) {
             )}
 
             {!loading && !weather && <p className="mt-6 text-gray-600">Kon het weer niet ophalen. Probeer later opnieuw.</p>}
+          </div>
+
+          <div className="mt-8 rounded-2xl bg-white shadow p-6">
+            <h2 className="text-xl font-semibold text-gray-900">Meer weten over buiten drogen</h2>
+            <p className="mt-2 text-sm text-gray-600">
+              Verdiep je in praktische scenario&apos;s en plan je wasmoment beter met deze gidsen.
+            </p>
+            <div className="mt-4 grid gap-3 md:grid-cols-3">
+              {localGuides.map((guide) => (
+                <Link
+                  key={guide.href}
+                  href={guide.href}
+                  className="rounded-xl border border-gray-200 p-4 hover:border-sky-300 hover:bg-sky-50 transition-colors"
+                >
+                  <div className="font-medium text-gray-900">{guide.label}</div>
+                  <div className="text-sm text-gray-600 mt-1">{guide.summary}</div>
+                </Link>
+              ))}
+            </div>
           </div>
 
           {nearby.length > 0 && (
