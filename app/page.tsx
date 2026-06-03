@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Header from './components/Header';
 import FloatingShare from './components/FloatingShare';
 import AnimatedHero from './components/AnimatedHero';
+import CoolblueAffiliateSection from './components/CoolblueAffiliateSection';
 
 interface WeatherData {
   temp: number;
@@ -320,6 +321,14 @@ const tips: string[] = [];
                     </ul>
                   </div>
                 )}
+
+                <CoolblueAffiliateSection
+                  calcOutcome={
+                    result.rating === 'slecht' || result.rating === 'ongeschikt'
+                      ? 'not_recommended'
+                      : 'dry_possible'
+                  }
+                />
               </div>
             )}
           </div>
