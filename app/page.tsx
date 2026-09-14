@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import Header from './components/Header';
 import FloatingShare from './components/FloatingShare';
 import AnimatedHero from './components/AnimatedHero';
@@ -26,6 +27,29 @@ interface DryingResult {
     sunScore: number;
   };
 }
+
+const supportingGuides = [
+  {
+    href: '/gids/was-buiten-drogen-winter',
+    title: 'Was buiten drogen in de winter',
+    description: 'Wat werkt bij vorst, wat niet, en hoe je winterwas sneller droogt.',
+  },
+  {
+    href: '/gids/was-buiten-drogen-bij-hoge-luchtvochtigheid',
+    title: 'Buiten drogen bij hoge luchtvochtigheid',
+    description: 'Praktische aanpak voor vochtige dagen in Belgie.',
+  },
+  {
+    href: '/gids/was-buiten-drogen-15-graden',
+    title: 'Droogtijd bij 15 graden',
+    description: 'Realistische timing voor typisch voorjaarsweer.',
+  },
+  {
+    href: '/gids/beste-moment-om-was-buiten-te-hangen',
+    title: 'Beste moment om op te hangen',
+    description: 'Plan op uurvensters en vermijd avondvocht.',
+  },
+];
 
 export default function Home() {
   const [city, setCity] = useState('');
@@ -356,6 +380,10 @@ const tips: string[] = [];
                 <span className="mr-2">🗺️</span>
                 Regionale droogtips
               </a>
+              <a href="#praktische-gidsen" className="flex items-center py-2 px-3 text-sky-700 hover:text-sky-900 hover:bg-sky-100 rounded-lg transition-colors">
+                <span className="mr-2">G</span>
+                Praktische gidsen
+              </a>
               <a href="#alles-over-belgie" className="flex items-center py-2 px-3 text-sky-700 hover:text-sky-900 hover:bg-sky-100 rounded-lg transition-colors">
                 <span className="mr-2">🇧🇪</span>
                 Alles over buiten drogen in België
@@ -364,6 +392,33 @@ const tips: string[] = [];
                 <span className="mr-2">❓</span>
                 Veelgestelde vragen
               </a>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-8">
+            <h2 id="praktische-gidsen" className="text-2xl font-bold text-gray-800 mb-3">
+              Praktische gidsen rond buiten drogen
+            </h2>
+            <p className="text-gray-600 mb-5">
+              Op basis van veelgestelde zoekvragen hebben we vier extra gidsen toegevoegd.
+              Elke gids behandelt een specifiek droogscenario en linkt terug naar de calculator.
+            </p>
+            <div className="grid gap-3 md:grid-cols-2">
+              {supportingGuides.map((guide) => (
+                <Link
+                  key={guide.href}
+                  href={guide.href}
+                  className="rounded-xl border border-gray-200 p-4 hover:border-sky-300 hover:bg-sky-50 transition-colors"
+                >
+                  <h3 className="font-semibold text-gray-900">{guide.title}</h3>
+                  <p className="mt-1 text-sm text-gray-600">{guide.description}</p>
+                </Link>
+              ))}
+            </div>
+            <div className="mt-4">
+              <Link href="/gids" className="inline-block text-sm font-medium text-sky-700 hover:text-sky-900">
+                Bekijk alle gidsen
+              </Link>
             </div>
           </div>
 
@@ -529,7 +584,7 @@ const tips: string[] = [];
                   Kan ik babykleding veilig buiten drogen?
                 </summary>
                 <div className="p-4 pt-0 text-gray-600">
-                  Ja, babykleding kan prima buiten drogen en is zelfs aan te raden. De natuurlijke antibacteriële werking van UV-licht van de zon helpt schadelijke bacteriën te doden, wat juist goed is voor de gevoelige huid van baby's. Vermijd wel het gebruik van geparfumeerde wasverzachters en was babykleding apart van de rest om kruisbesmetting te voorkomen. Hang babykleertjes bij voorkeur niet direct in de felle middagzon om verkleuring te vermijden, en zorg ervoor dat ze volledig droog zijn voor je ze opvouwt.
+                  Ja, babykleding kan prima buiten drogen en is zelfs aan te raden. De natuurlijke antibacteriële werking van UV-licht van de zon helpt schadelijke bacteriën te doden, wat juist goed is voor de gevoelige huid van jonge kinderen. Vermijd wel het gebruik van geparfumeerde wasverzachters en was babykleding apart van de rest om kruisbesmetting te voorkomen. Hang babykleertjes bij voorkeur niet direct in de felle middagzon om verkleuring te vermijden, en zorg ervoor dat ze volledig droog zijn voor je ze opvouwt.
                 </div>
               </details>
 
@@ -1057,3 +1112,4 @@ const tips: string[] = [];
     </>
   );
 }
+

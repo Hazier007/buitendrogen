@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { gemeentes } from './data/gemeentes';
+import { guides } from './data/guides';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://buitendrogen.be';
@@ -18,7 +19,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.5,
     },
+    {
+      url: `${baseUrl}/gids`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
   ];
+
+  const guidePages: MetadataRoute.Sitemap = guides.map((guide) => ({
+    url: `${baseUrl}/gids/${guide.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }));
 
   // All gemeente pages
   const gemeentePages: MetadataRoute.Sitemap = gemeentes.map((gemeente) => ({
@@ -28,5 +42,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...gemeentePages];
+  return [...staticPages, ...guidePages, ...gemeentePages];
 }
