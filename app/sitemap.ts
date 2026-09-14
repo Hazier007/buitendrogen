@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { gemeentes } from './data/gemeentes';
+import { gemeentes, INDEXED_GEMEENTES } from './data/gemeentes';
 import { guides } from './data/guides';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -34,13 +34,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  // All gemeente pages
-  const gemeentePages: MetadataRoute.Sitemap = gemeentes.map((gemeente) => ({
-    url: `${baseUrl}/${gemeente.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'daily' as const,
-    priority: 0.8,
-  }));
+  // Only the geindexeerde gemeente pages (SEO-snoei 2026-09-15) — de rest krijgt noindex
+  // en blijft bereikbaar voor bezoekers, maar hoort niet in de sitemap.
+  const gemeentePages: MetadataRoute.Sitemap = gemeentes
+    .filter((gemeente) => INDEXED_GEMEENTES.includes(gemeente.slug))
+    .map((gemeente) => ({
+      url: `${baseUrl}/${gemeente.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'daily' as const,
+      priority: 0.8,
+    }));
 
   return [...staticPages, ...guidePages, ...gemeentePages];
 }

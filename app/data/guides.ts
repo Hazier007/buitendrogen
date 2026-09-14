@@ -265,6 +265,146 @@ export const guides: Guide[] = [
       { slug: "mechelen", name: "Mechelen" },
     ],
   },
+  {
+    slug: "droogtijd-per-kledingstuk",
+    title: "Droogtijd per kledingstuk: van sokken tot spijkerbroek",
+    description:
+      "Niet alle was droogt even snel. Ontdek de realistische droogtijd per kledingstuk, van sokken tot spijkerbroeken, en plan je wasdag slimmer.",
+    keyword: "droogtijd was per kledingstuk",
+    intro: [
+      "Niet alle was droogt even snel — een dunne blouse wappert in twee uur droog terwijl een spijkerbroek op dezelfde lijn een halve dag hangt. Wie weet welk kledingstuk hoeveel tijd vraagt, plant zijn wasdag slimmer: het dikke werk 's ochtends buiten, het dunne spul erbij als de zon al zakt.",
+      "Hieronder de realistische droogtijden per soort, gemeten bij gemiddeld droogweer (18 graden, matige wind, halfbewolkt). Onze calculator verrekent het actuele weer voor je eigen gemeente.",
+    ],
+    sections: [
+      {
+        heading: "Snel droog (1 tot 3 uur)",
+        paragraphs: ["Dun en licht textiel geeft zijn vocht makkelijk af:"],
+        bullets: [
+          "Sokken en ondergoed: 1 à 2 uur — hang sokken per paar aan de tenen, niet dubbelgevouwen",
+          "Dunne T-shirts en blouses: 2 à 3 uur — aan een hangertje drogen ze nog sneller én kreukvrij",
+          "Sportkleding (synthetisch): 1 à 2 uur — polyester houdt amper vocht vast",
+          "Theedoeken en zakdoeken: 2 uur",
+        ],
+      },
+      {
+        heading: "Gemiddeld (3 tot 5 uur)",
+        paragraphs: [],
+        bullets: [
+          "Overhemden en jurken: 3 à 4 uur, afhankelijk van de stof",
+          "Lakens en dekbedovertrekken: 3 à 5 uur — dubbel over de lijn kost een uur extra; hang ze als een tent open",
+          "Truien (katoen): 4 à 5 uur — liggend drogen voorkomt uitrekken, maar duurt langer",
+          "Broeken (chino, jogging): 3 à 4 uur — binnenstebuiten en aan de band opgehangen",
+        ],
+      },
+      {
+        heading: "Traag (5 uur en meer)",
+        paragraphs: [],
+        bullets: [
+          "Spijkerbroeken: 5 à 7 uur — de dikke naden houden het langst vocht vast; voel altijd aan de tailleband en de zomen",
+          "Handdoeken en badjassen: 5 à 6 uur — badstof is een spons; stevig uitschudden voor het ophangen scheelt een uur",
+          "Hoodies en dikke truien: 5 à 7 uur — de capuchon is de valkuil: hang hem over een tweede lijn of kleerhanger",
+          "Dekbedden en dekens: een volle droogdag — alleen buiten drogen bij echt goed weer, en halverwege draaien",
+        ],
+      },
+      {
+        heading: "Zo versnel je elke droogtijd",
+        paragraphs: [],
+        bullets: [
+          "Centrifugeer op het hoogste toerental dat de stof verdraagt: elke minuut centrifuge is tien minuten lijn",
+          "Schud elk stuk stevig uit voor het ophangen — platgeslagen stof droogt trager",
+          "Hang met ruimte tussen de stukken: aanrakende was droogt op de raakvlakken niet",
+          "Wind doet meer dan zon: een winderige bewolkte dag verslaat een windstille zonnige dag",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "Waarom droogt mijn spijkerbroek zo traag?",
+        answer:
+          "Denim is dik geweven katoen en de dubbele naden werken als sponzen. Hang de broek binnenstebuiten aan de tailleband, zo vangen de zakken en naden de meeste wind.",
+      },
+      {
+        question: "Droogt was aan een hangertje sneller?",
+        answer:
+          "Ja — hemden, blouses en jurken drogen aan een hanger rondom, in plaats van dubbelgevouwen over de lijn. Bonus: minder strijkwerk.",
+      },
+      {
+        question: "Kan ik dikke was buiten vóórdrogen en binnen afdrogen?",
+        answer:
+          "Dat is zelfs de slimste aanpak in de tussenseizoenen: twee à drie uur buitenwind haalt het meeste vocht eruit, de laatste restvochtigheid verdwijnt binnen zonder condensprobleem.",
+      },
+    ],
+    relatedGemeentes: [
+      { slug: "kortrijk", name: "Kortrijk" },
+      { slug: "hasselt", name: "Hasselt" },
+      { slug: "sint-niklaas", name: "Sint-Niklaas" },
+      { slug: "roeselare", name: "Roeselare" },
+    ],
+  },
+  {
+    slug: "was-binnen-drogen-zonder-condens",
+    title: "Was binnen drogen zonder condens- en schimmelproblemen",
+    description:
+      "Binnen drogen hoeft geen condens of schimmel te veroorzaken. Ontdek hoe je vocht afvoert, het droogrek slim plaatst en wanneer buiten toch de betere keuze is.",
+    keyword: "was binnen drogen condens",
+    intro: [
+      "Van november tot februari is binnen drogen voor veel gezinnen de enige optie — maar een rek nat wasgoed dumpt twee tot drie liter water in je huiskamerlucht. Zonder plan betekent dat beslagen ramen, muffe geuren en op termijn schimmel in de koudste hoeken.",
+      "Met de juiste aanpak droogt je was binnen prima én blijft je huis gezond. Zo doe je het goed.",
+    ],
+    sections: [
+      {
+        heading: "De gouden regels voor binnen drogen",
+        paragraphs: [],
+        bullets: [
+          "Kies de warmste, best geventileerde kamer — niet de slaapkamer (daar hangt 's nachts al de meeste vochtigheid)",
+          "Zet een raam op kier of laat de ventilatie op de hoogste stand draaien zolang de was hangt",
+          "Ruimte tussen de stukken is binnen nóg belangrijker dan buiten: binnen is er geen wind die het overneemt",
+          "Centrifugeer extra goed — elke druppel die niet mee naar binnen komt, hoeft er ook niet uit je lucht",
+        ],
+      },
+      {
+        heading: "Condens en schimmel voorkomen",
+        paragraphs: [
+          "Vocht zoekt altijd het koudste oppervlak op: enkel glas, buitenmuren, de hoek achter de kast. Daar condenseert het en daar begint schimmel. De remedie is drieledig: beperk de vochtproductie (goed centrifugeren), voer het vocht af (ventileren, ook als het buiten koud is — koude buitenlucht is dróge lucht die binnen opwarmt en vocht opneemt), en verwarm de ruimte licht door: lucht van 20 graden houdt dubbel zoveel vocht vast als lucht van 10 graden. Zie je toch beslagen ramen, dan hangt er meer vocht in de lucht dan je afvoert — meer ventileren of minder was tegelijk.",
+        ],
+      },
+      {
+        heading: "Helpt een droogrek boven de verwarming?",
+        paragraphs: [
+          "Deels. De stijgende warme lucht versnelt het drogen merkbaar, maar de radiator zelf afdekken met wasgoed is een slecht idee: je blokkeert de warmteafgifte, jaagt je energiefactuur op en de kamer koelt af terwijl het vocht blijft. Beter: het rek op een halve meter náást de radiator, zodat de warme luchtstroom er langs kan. Een ventilator op de laagste stand richting het rek doet overigens meer dan de radiator — bewegende lucht is het halve werk.",
+        ],
+      },
+      {
+        heading: "Wanneer is buiten tóch beter?",
+        paragraphs: [
+          "Vaker dan je denkt. Een droge winterdag met wind droogt beter dan een vochtige kamer: bij 5 graden en een stevige bries is dunne was in drie uur klaar. Zelfs bij lichte vorst werkt het — de was vriest eerst stijf, maar het ijs verdampt rechtstreeks (vriesdrogen). Check onze calculator: die zegt per gemeente of vandaag een buitendag is.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "Hoeveel vocht komt er vrij bij binnen drogen?",
+        answer:
+          "Een volle trommel van 7 kilo brengt na het centrifugeren nog zo'n twee à drie liter water mee naar binnen. Al dat vocht moet via ventilatie naar buiten — anders slaat het neer op ramen en muren.",
+      },
+      {
+        question: "Is een luchtontvochtiger de moeite waard?",
+        answer:
+          "Voor wie structureel binnen droogt: ja. Een compact toestel naast het droogrek halveert de droogtijd en vangt het vocht op in een reservoir in plaats van in je muren. Het verbruik ligt ver onder dat van een droogkast.",
+      },
+      {
+        question: "Waarom ruikt binnen gedroogde was soms muf?",
+        answer:
+          "Te traag gedroogd: als was langer dan een dag vochtig hangt, krijgen geurbacteriën vrij spel. Sneller drogen (centrifuge, ventilatie, ruimte tussen de stukken) is de oplossing — niet meer wasparfum.",
+      },
+    ],
+    relatedGemeentes: [
+      { slug: "genk", name: "Genk" },
+      { slug: "oostende", name: "Oostende" },
+      { slug: "aalst", name: "Aalst" },
+      { slug: "dendermonde", name: "Dendermonde" },
+    ],
+  },
 ];
 
 export function getGuideBySlug(slug: string) {

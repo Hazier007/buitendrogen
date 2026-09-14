@@ -28,6 +28,47 @@ interface DryingResult {
   };
 }
 
+const homepageFaq = [
+  {
+    question: 'Hoe berekent deze tool de droogtijd?',
+    answer:
+      'We combineren het actuele weer voor jouw gemeente — temperatuur, luchtvochtigheid, windkracht en bewolking — tot een droogscore, en vertalen die naar een realistische droogtijd voor een gemiddelde wasmand. Dikke stukken zoals jeans en handdoeken duren langer; dun textiel is sneller klaar.',
+  },
+  {
+    question: 'Wat is het ideale weer om was buiten te drogen?',
+    answer:
+      'Wind is belangrijker dan zon: bewegende lucht voert vocht af, zon helpt vooral via warmte. De ideale droogdag is winderig, droog en licht bewolkt. Hoge luchtvochtigheid (boven ±80%) maakt drogen traag, hoe warm het ook is.',
+  },
+  {
+    question: 'Kan was buiten drogen in de winter?',
+    answer:
+      'Ja — op droge, winderige winterdagen droogt dunne was in enkele uren, en zelfs bij lichte vorst verdampt het vocht (vriesdrogen). Alleen bij mist, regen of windstil vochtig weer is binnen drogen de betere keuze. Lees er meer over in onze wintergids.',
+  },
+  {
+    question: 'Waarom voelt mijn was buiten soms stug aan?',
+    answer:
+      'Vooral handdoeken worden hard als ze traag en zonder beweging drogen — de vezels plakken aan elkaar. Drogen op een winderige plek en stevig uitschudden houdt ze zachter. Stug geworden? Tien minuten in de droogkast met een droog badlaken maakt veel goed.',
+  },
+  {
+    question: "Mag was 's nachts buiten blijven hangen?",
+    answer:
+      "Liever niet: 's nachts stijgt de luchtvochtigheid en slaat er dauw neer, waardoor je ochtendwas natter kan zijn dan toen je ging slapen. Haal de was binnen vóór zonsondergang, of laat ze binnen afdrogen.",
+  },
+];
+
+const homepageFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: homepageFaq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
 const supportingGuides = [
   {
     href: '/gids/was-buiten-drogen-winter',
@@ -650,6 +691,18 @@ const tips: string[] = [];
                   Ja, dat kan inderdaad waar zijn! Wind is vaak belangrijker voor drogen dan zonlicht. Een bewolkte dag met stevige wind (&gt;20 km/u) en lage luchtvochtigheid kan effectiever zijn dan een windstille zonnige dag met hoge luchtvochtigheid. Wind voert voortdurend vochtige lucht weg en brengt droge lucht aan, terwijl zonlicht alleen verhit. De ideale combinatie is natuurlijk zon én wind. Dit is waarom onze calculator alle vier de factoren (temperatuur, luchtvochtigheid, wind, bewolking) meeneemt in plaats van alleen naar de temperatuur te kijken. Het verklaart ook waarom was soms sneller droogt in de herfst dan op een warme maar vochtige zomerdag.
                 </div>
               </details>
+
+              {homepageFaq.map((item) => (
+                <details
+                  key={item.question}
+                  className="border border-gray-200 rounded-lg hover:border-gray-300 transition-colors"
+                >
+                  <summary className="cursor-pointer p-4 font-semibold text-gray-800 hover:bg-gray-50 rounded-lg select-none">
+                    {item.question}
+                  </summary>
+                  <div className="p-4 pt-0 text-gray-600">{item.answer}</div>
+                </details>
+              ))}
             </div>
           </div>
 
@@ -1109,6 +1162,10 @@ const tips: string[] = [];
           {/* Second FAQ section removed and merged into first FAQ section */}
         </div>
       </main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageFaqSchema) }}
+      />
     </>
   );
 }

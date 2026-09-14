@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-import { gemeentes, getGemeenteBySlug, type Gemeente } from '../data/gemeentes';
+import { gemeentes, getGemeenteBySlug, isIndexedGemeente, type Gemeente } from '../data/gemeentes';
 import GemeenteClient from './GemeenteClient';
 
 interface PageProps {
@@ -46,6 +46,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     alternates: {
       canonical: `https://buitendrogen.be/${gemeente.slug}`,
     },
+    ...(isIndexedGemeente(gemeente.slug) ? {} : { robots: { index: false, follow: true } }),
   };
 }
 

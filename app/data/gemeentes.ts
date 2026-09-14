@@ -345,6 +345,32 @@ export const gemeentes: Gemeente[] = [
   { slug: 'sint-joost-ten-node', name: 'Sint-Joost-ten-Node', province: 'Brussels Hoofdstedelijk Gewest', lat: 50.8500, lon: 4.3667, population: 27000 },
 ];
 
+// SEO-snoei 2026-09-15 (besluit Bart): van de ±310 programmatische gemeentepagina's
+// blijven enkel deze 15 grote steden geindexeerd. De rest krijgt noindex en valt uit
+// de sitemap, maar blijft bereikbaar voor bezoekers. Bevat ook alle slugs die vanuit
+// app/data/guides.ts (relatedGemeentes) gelinkt worden — die zijn hier een subset van.
+export const INDEXED_GEMEENTES: string[] = [
+  'antwerpen',
+  'gent',
+  'brugge',
+  'leuven',
+  'hasselt',
+  'brussel',
+  'mechelen',
+  'aalst',
+  'kortrijk',
+  'oostende',
+  'sint-niklaas',
+  'genk',
+  'roeselare',
+  'turnhout',
+  'dendermonde',
+];
+
+export function isIndexedGemeente(slug: string): boolean {
+  return INDEXED_GEMEENTES.includes(slug);
+}
+
 export function getGemeenteBySlug(slug: string): Gemeente | undefined {
   return gemeentes.find(g => g.slug === slug);
 }

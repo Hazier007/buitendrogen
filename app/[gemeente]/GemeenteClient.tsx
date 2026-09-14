@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { type Gemeente, getGemeentesByProvince } from '../data/gemeentes';
+import { type Gemeente, getGemeentesByProvince, INDEXED_GEMEENTES } from '../data/gemeentes';
 
 type WeatherData = {
   temp: number;
@@ -81,7 +81,7 @@ export default function GemeenteClient({ gemeente, initialWeather }: Props) {
 
   const nearby = useMemo(() => {
     return getGemeentesByProvince(gemeente.province)
-      .filter((g) => g.slug !== gemeente.slug)
+      .filter((g) => g.slug !== gemeente.slug && INDEXED_GEMEENTES.includes(g.slug))
       .slice(0, 6);
   }, [gemeente.province, gemeente.slug]);
 
